@@ -1,3 +1,9 @@
 < en_US.lang - English localization file for the mod Tutorial >
 item.firstItem.name=Tutorial Item
 tile.texture.name=Tutorial Block
+tile.texture_1.name=Metablock 1 (White)
+tile.texture_0.name=Metablock 1 (Black)
+tile.texture_2.name=Metablock 2 (Red)
+tile.texture_3.name=Metablock 3 (Green)
+tile.texture_4.name=Metablock 4 (Yellow)
+tile.texture_5.name=Metablock 5 (Blue)

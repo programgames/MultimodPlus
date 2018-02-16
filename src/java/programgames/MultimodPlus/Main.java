@@ -10,7 +10,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import programgames.MultimodPlus.proxy.*;
 
 
-@Mod(modid = Main.MODID, name = Main.MODNAME, version = Main.VERSION)
+@Mod(modid = Main.MODID, name = Main.MODNAME, version = Main.VERSION,useMetadata = true)
 
 
 public class Main {
