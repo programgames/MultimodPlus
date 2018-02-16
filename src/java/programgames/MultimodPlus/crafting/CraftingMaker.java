@@ -13,6 +13,9 @@ public class CraftingMaker {
 	{
 	    GameRegistry.addRecipe(new ItemStack(BlockMaker.tutorialBlock), new Object[] {"##", "##", '#', ItemMaker.tutorialItem});
 	    GameRegistry.addSmelting(Items.diamond, new ItemStack(ItemMaker.tutorialItem), 1.0F);
+	    
+	    //register a craft using metadata of an item ex : specif dye
+	    //GameRegistry.addShapelessRecipe(new ItemStack(Blocks.coal_block), new Object[]{new ItemStack(Items.dye, 1, 0)});
 	}
 
 }
