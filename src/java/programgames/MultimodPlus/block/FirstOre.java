@@ -49,17 +49,6 @@ public class FirstOre extends Block {
 		return this.meta;
 	}
 
-	/**@Override
-	public void onEntityCollidedWithBlock(World world, int i, int j, int k, Entity entity){
-		if(entity instanceof EntityItem){
-			System.out.println("ici");
-		  if(((EntityItem) entity).getEntityItem().getItem() == Item.getItemFromBlock(Blocks.obsidian)){
-			  System.out.println("ici");
-		   world.setBlock(i, j, k, Blocks.glass);
-		   entity.setDead();
-		  }
-		}
-		}**/
 	   public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int i, int j, int k)
 	    {
 	        float f = 0.0625F;
