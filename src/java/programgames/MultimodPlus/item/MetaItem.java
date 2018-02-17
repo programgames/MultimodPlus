@@ -35,8 +35,9 @@ public class MetaItem extends Item {
         return this.icons[meta];
     }
 
-    @Override
-    public void getSubItems(Item item, CreativeTabs tab, List list) {
+    @SuppressWarnings("unchecked")
+	@Override
+    public void getSubItems(Item item, CreativeTabs tab, @SuppressWarnings("rawtypes") List list) {
         for (int i = 0; i < 6; i ++) {
             list.add(new ItemStack(item, 1, i));
         }

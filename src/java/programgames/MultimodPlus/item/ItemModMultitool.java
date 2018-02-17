@@ -1,5 +1,6 @@
 package programgames.MultimodPlus.item;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import com.google.common.collect.ImmutableSet;
@@ -20,7 +21,7 @@ public class ItemModMultitool extends ItemPickaxe {
         this.setUnlocalizedName(unlocalizedName);
         this.setTextureName(Main.MODID + ":" + unlocalizedName);
     }
-	private static Set effectiveAgainst = Sets.newHashSet(new Block[] {
+	private static HashSet<Block> effectiveAgainst = Sets.newHashSet(new Block[] {
 		    Blocks.grass, Blocks.dirt, Blocks.sand, Blocks.gravel, 
 		    Blocks.snow_layer, Blocks.snow, Blocks.clay, Blocks.farmland, 
 		    Blocks.soul_sand, Blocks.mycelium});
