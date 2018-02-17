@@ -6,8 +6,9 @@ import net.minecraft.block.BlockStairs;
 public class CustomStair  extends BlockStairs {
 
 	
-	 public CustomStair(Block sourceBlock,String name){
-			super(i,"test");
+	 public CustomStair(Block sourceBlock,int metadata,String name){
+			super(sourceBlock,metadata);
+			this.setBlockName(name);
 				this.useNeighborBrightness = true;
 			setHardness(0.75F);
 			setResistance(0.75F);
