@@ -29,7 +29,7 @@ public class ItemMaker {
 	public static ToolMaterial tutorial;
 	public static ArmorMaterial tutorial_armor;
 	public static ItemFood chocolate;
-
+	public static Item key;
 	public static final void init() {
 
 		tutorialItem = new Item().setUnlocalizedName("firstItem").setCreativeTab(CreativeTabs.tabMisc).setTextureName(Main.MODID + ":icone");;
@@ -52,6 +52,8 @@ public class ItemMaker {
 			    new PotionEffect(Potion.jump.id, 600, 0),
 			    new PotionEffect(Potion.regeneration.id, 200, 1))
 			    .setAlwaysEdible(), "chocolate");
+		
+	    GameRegistry.registerItem(key= new Key("key").setTextureName(Main.MODID + ":key"), "key");
 		
 	}
 }

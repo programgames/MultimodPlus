@@ -4,7 +4,11 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
+import net.minecraft.util.MathHelper;
+import net.minecraft.world.World;
 import programgames.MultimodPlus.Main;
 
 public class MultitexturedBlock extends Block {
@@ -37,7 +41,16 @@ public class MultitexturedBlock extends Block {
 
 	@Override
 	public IIcon getIcon(int side, int meta) {
-		
-	    return this.icons[side];
+		if((side == 3 && meta == 0) || (side == 4 && meta == 1) || (side == 2 && meta== 2) || (side == 5 && meta== 3))
+		{
+		return this.icons[meta];
+		}
+		return this.icons[meta];
+	    
+	}
+	public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase living, ItemStack stack)
+	{
+	int direction = MathHelper.floor_double((double)(living.rotationYaw * 4.0F / 360.0F) + 2.5D) & 3;
+	world.setBlockMetadataWithNotify(x, y, z, direction, 2);
 	}
 }
