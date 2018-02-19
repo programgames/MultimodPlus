@@ -24,10 +24,10 @@ public class Key extends Item{
 			player.addChatMessage(new ChatComponentText("serveur : side " + side));
 			player.addChatMessage(new ChatComponentText("serveur : metadata " + world.getBlockMetadata(x, y, z)));
 		}
-		/**if(world.getBlock(x, y, z).rotateBlock(world, x, y, z, ForgeDirection.getOrientation(side)))
+		if(world.getBlock(x, y, z).rotateBlock(world, x, y, z, ForgeDirection.getOrientation(side)))
 		{
 			return true;
-		}**/
+		}
 		return false;
 	}
 

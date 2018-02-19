@@ -8,9 +8,10 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 import programgames.MultimodPlus.Main;
 
+//classe qui crrer du chocolat avec des effet
 public class FirstFood extends ItemFood {
 
-	@SuppressWarnings("unused")
+	
 	private PotionEffect[] effects;
 
 	FirstFood(String unlocalizedName, int healAmount, float saturationModifier, boolean isWolfFood,PotionEffect... effects)
@@ -21,6 +22,7 @@ public class FirstFood extends ItemFood {
 	    this.setCreativeTab(CreativeTabs.tabFood);
 	    this.effects = effects;
 	}
+	 
 	//Function to applly the effect after eaten
 	@Override
 	protected void onFoodEaten(ItemStack stack, World world, EntityPlayer player) {

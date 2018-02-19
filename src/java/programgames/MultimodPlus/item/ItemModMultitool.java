@@ -13,28 +13,28 @@ import net.minecraft.item.ItemStack;
 import programgames.MultimodPlus.Main;
 
 public class ItemModMultitool extends ItemPickaxe {
-	
-	
-	
-	protected ItemModMultitool(String unlocalizedName, ToolMaterial material) {
-        super(material);
-        this.setUnlocalizedName(unlocalizedName);
-        this.setTextureName(Main.MODID + ":" + unlocalizedName);
-    }
+
 	private static HashSet<Block> effectiveAgainst = Sets.newHashSet(new Block[] {
-		    Blocks.grass, Blocks.dirt, Blocks.sand, Blocks.gravel, 
-		    Blocks.snow_layer, Blocks.snow, Blocks.clay, Blocks.farmland, 
-		    Blocks.soul_sand, Blocks.mycelium});
+			Blocks.grass, Blocks.dirt, Blocks.sand, Blocks.gravel, 
+			Blocks.snow_layer, Blocks.snow, Blocks.clay, Blocks.farmland, 
+			Blocks.soul_sand, Blocks.mycelium});
+
+	protected ItemModMultitool(String unlocalizedName, ToolMaterial material) {
+		super(material);
+		this.setUnlocalizedName(unlocalizedName);
+		this.setTextureName(Main.MODID + ":" + unlocalizedName);
+	}
+	
 	@Override
 	public Set<String> getToolClasses(ItemStack stack) {
-	    return ImmutableSet.of("pickaxe", "shovel");
+		return ImmutableSet.of("pickaxe", "shovel");
 	}
 	@Override
 	public boolean func_150897_b(Block block) {
-	    return effectiveAgainst.contains(block) ? true : super.func_150897_b(block);
+		return effectiveAgainst.contains(block) ? true : super.func_150897_b(block);
 	}
 	@Override
 	public float func_150893_a(ItemStack stack, Block block) {
-	    return effectiveAgainst.contains(block) ? this.efficiencyOnProperMaterial : super.func_150893_a(stack, block);
+		return effectiveAgainst.contains(block) ? this.efficiencyOnProperMaterial : super.func_150893_a(stack, block);
 	}
 }
