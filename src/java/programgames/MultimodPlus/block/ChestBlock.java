@@ -10,7 +10,6 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
@@ -64,6 +63,7 @@ public class ChestBlock extends Block {
 	               ((TileEntityChest)tile).setCustomName(stack.getDisplayName());
 	           }
 	       }
+	     
 	}
 	@Override
 	public boolean rotateBlock(World world, int x, int y, int z, ForgeDirection axis)
@@ -164,6 +164,7 @@ public class ChestBlock extends Block {
 	       }
 	       super.breakBlock(world, x, y, z, block, metadata);
 	   }
+	   
 
 	// HITBOX https://www.minecraftforgefrance.fr/showthread.php?tid=1509#classe5
 }

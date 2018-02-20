@@ -6,6 +6,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import programgames.MultimodPlus.block.BlockMaker;
 import programgames.MultimodPlus.client.RenderInventoryMaker;
 import programgames.MultimodPlus.crafting.CraftingMaker;
+import programgames.MultimodPlus.gui.GuiMaker;
 import programgames.MultimodPlus.item.ItemMaker;
 import programgames.MultimodPlus.tileentity.TileEntityMaker;
 import programgames.MultimodPlus.world.Worldgen;
@@ -21,6 +22,7 @@ public class CommonProxy {
 		GameRegistry.registerWorldGenerator(new Worldgen(), 0);
 		TileEntityMaker.init();
 		RenderInventoryMaker.init();
+		GuiMaker.init();
 
 	}
 
