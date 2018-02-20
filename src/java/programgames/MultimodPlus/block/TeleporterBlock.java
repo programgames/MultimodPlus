@@ -8,9 +8,9 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.World;
 import programgames.MultimodPlus.Main;
 
-public class SimpleBlock extends Block {
+public class TeleporterBlock extends Block {
 		
-	protected  SimpleBlock(String unlocalizedName, Material material) {
+	protected  TeleporterBlock(String unlocalizedName, Material material) {
 		super(material);
 		
 		this.setBlockName(unlocalizedName);

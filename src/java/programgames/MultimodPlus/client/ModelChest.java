@@ -15,12 +15,12 @@ import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
-public class multi extends ModelBase
+public class ModelChest extends ModelBase
 {
   //fields
     ModelRenderer Shape1;
   
-  public multi()
+  public ModelChest()
   {
     textureWidth = 363;
     textureHeight = 577;

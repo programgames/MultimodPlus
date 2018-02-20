@@ -22,8 +22,8 @@ public class TESRInventoryRenderer implements ISimpleBlockRenderingHandler {
         //    GL11.glRotatef(180F, 0.0F, 0.0F, 1.0F);
             GL11.glRotated(180F, 1.0F, 0.0F, 0.0F);
             GL11.glTranslatef(0.0F, -1.0F, 0.0F);
-            Minecraft.getMinecraft().getTextureManager().bindTexture(TileEntityTutorielSpecialRenderer.texture);
-            TileEntityTutorielSpecialRenderer.model.renderAll();
+            Minecraft.getMinecraft().getTextureManager().bindTexture(TileEntityChestSpecialRenderer.texture);
+            TileEntityChestSpecialRenderer.model.renderAll();
             GL11.glPopMatrix();
         }
 

@@ -3,18 +3,19 @@ package programgames.MultimodPlus.tileentity;
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import programgames.MultimodPlus.Main;
-import programgames.MultimodPlus.client.TileEntityTutorielSpecialRenderer;
+import programgames.MultimodPlus.client.TileEntityChestSpecialRenderer;
 
 public class TileEntityMaker {
 
 
-	public TileEntityTutoriel tileEntityTutoriel1;
+	public TileEntityCounter tileEntityTutoriel1;
+	
 	public static final void init() {
 		
-		GameRegistry.registerTileEntity(TileEntityTutoriel.class,Main.MODID + ":tile1");
-		GameRegistry.registerTileEntity(TileEntityVoid.class,Main.MODID + ":tileVoid");
+		GameRegistry.registerTileEntity(TileEntityCounter.class,Main.MODID + ":tile1");
 
-		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityVoid.class, new TileEntityTutorielSpecialRenderer());
+		GameRegistry.registerTileEntity(TileEntityChest.class,Main.MODID + ":tileVoid");
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityChest.class, new TileEntityChestSpecialRenderer());
 
 
 	}

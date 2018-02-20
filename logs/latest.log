@@ -1,59 +1,25 @@
-[22:25:21] [main/INFO]: Setting user: programgames
-[22:25:22] [Client thread/INFO]: LWJGL Version: 2.9.1
-[22:25:29] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MultimodPlus, FMLFileResourcePack:Example Mod
-[22:25:30] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
-[22:25:30] [Client thread/INFO]: Created: 16x16 textures/items-atlas
-[22:25:30] [Sound Library Loader/INFO]: Sound engine started
-[22:25:30] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MultimodPlus, FMLFileResourcePack:Example Mod
-[22:25:30] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[22:25:30] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[22:25:31] [Sound Library Loader/INFO]: Sound engine started
-[22:25:34] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[22:25:34] [Server thread/INFO]: Generating keypair
-[22:25:34] [Server thread/INFO]: Preparing start region for level 0
-[22:25:34] [Server thread/INFO]: Changing view distance to 12, from 10
-[22:25:35] [Server thread/INFO]: programgames[local:E:1af48342] logged in with entity id 0 at (-1904.803894215384, 1.0, 1314.4025044174218)
-[22:25:35] [Server thread/INFO]: programgames joined the game
-[22:25:39] [Client thread/INFO]: [CHAT] serveur : side 1
-[22:25:39] [Client thread/INFO]: [CHAT] serveur : metadata 0
-[22:25:40] [Client thread/INFO]: [CHAT] serveur : side 1
-[22:25:40] [Client thread/INFO]: [CHAT] serveur : metadata 0
-[22:25:40] [Client thread/INFO]: [CHAT] serveur : side 1
-[22:25:40] [Client thread/INFO]: [CHAT] serveur : metadata 0
-[22:25:42] [Client thread/INFO]: [CHAT] serveur : side 1
-[22:25:42] [Client thread/INFO]: [CHAT] serveur : metadata 0
-[22:25:42] [Client thread/INFO]: [CHAT] serveur : side 1
-[22:25:42] [Client thread/INFO]: [CHAT] serveur : metadata 0
-[22:25:42] [Client thread/INFO]: [CHAT] serveur : side 1
-[22:25:42] [Client thread/INFO]: [CHAT] serveur : metadata 0
-[22:25:43] [Client thread/INFO]: [CHAT] serveur : side 1
-[22:25:43] [Client thread/INFO]: [CHAT] serveur : metadata 0
-[22:25:44] [Client thread/INFO]: [CHAT] serveur : side 1
-[22:25:44] [Client thread/INFO]: [CHAT] serveur : metadata 0
-[22:25:44] [Client thread/INFO]: [CHAT] serveur : side 1
-[22:25:44] [Client thread/INFO]: [CHAT] serveur : metadata 0
-[22:25:44] [Client thread/INFO]: [CHAT] serveur : side 1
-[22:25:44] [Client thread/INFO]: [CHAT] serveur : metadata 0
-[22:26:04] [Server thread/INFO]: Saving and pausing game...
-[22:26:04] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[22:26:04] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[22:26:04] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[22:26:05] [Server thread/INFO]: Stopping server
-[22:26:05] [Server thread/INFO]: Saving players
-[22:26:05] [Server thread/INFO]: Saving worlds
-[22:26:05] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[22:26:05] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[22:26:05] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[22:26:06] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[22:26:06] [Server thread/INFO]: Generating keypair
-[22:26:06] [Server thread/INFO]: Preparing start region for level 0
-[22:26:07] [Server thread/INFO]: Changing view distance to 12, from 10
-[22:26:07] [Server thread/INFO]: programgames[local:E:91c2e29b] logged in with entity id 52 at (-1907.3163919531582, 1.0, 1323.9039574475705)
-[22:26:07] [Server thread/INFO]: programgames joined the game
-[22:26:19] [Client thread/INFO]: Stopping!
-[22:26:19] [Server thread/INFO]: Stopping server
-[22:26:19] [Server thread/INFO]: Saving players
-[22:26:19] [Server thread/INFO]: Saving worlds
-[22:26:19] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[22:26:19] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[22:26:19] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[13:28:02] [main/INFO]: Setting user: programgames
+[13:28:03] [Client thread/INFO]: LWJGL Version: 2.9.1
+[13:28:09] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MultimodPlus, FMLFileResourcePack:Example Mod
+[13:28:10] [Sound Library Loader/INFO]: Sound engine started
+[13:28:10] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
+[13:28:10] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[13:28:10] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MultimodPlus, FMLFileResourcePack:Example Mod
+[13:28:11] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[13:28:11] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[13:28:12] [Sound Library Loader/INFO]: Sound engine started
+[13:28:17] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[13:28:17] [Server thread/INFO]: Generating keypair
+[13:28:17] [Server thread/INFO]: Preparing start region for level 0
+[13:28:18] [Server thread/INFO]: Changing view distance to 12, from 10
+[13:28:19] [Server thread/INFO]: programgames[local:E:2151c51c] logged in with entity id 500 at (-126.26588442845168, 80.0, -96.7385469735559)
+[13:28:19] [Server thread/INFO]: programgames joined the game
+[13:28:32] [Client thread/INFO]: Stopping!
+[13:28:32] [Server thread/INFO]: Stopping server
+[13:28:32] [Server thread/INFO]: Saving players
+[13:28:32] [Server thread/INFO]: Saving worlds
+[13:28:32] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[13:28:32] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[13:28:32] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[13:28:32] [Client Shutdown Thread/INFO]: Stopping server
+[13:28:32] [Client Shutdown Thread/INFO]: Saving players

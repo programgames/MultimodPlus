@@ -3,7 +3,7 @@ package programgames.MultimodPlus.tileentity;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 
-public class TileEntityTutoriel extends TileEntity {
+public class TileEntityCounter extends TileEntity {
 
 	
 	private int number;

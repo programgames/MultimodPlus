@@ -14,13 +14,13 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 import programgames.MultimodPlus.Main;
-import programgames.MultimodPlus.tileentity.TileEntityTutoriel;
+import programgames.MultimodPlus.tileentity.TileEntityCounter;
 
-public class MultitexturedBlock2 extends Block {
+public class CounterBlock extends Block {
 
 	public IIcon[] icons = new IIcon[6];
 
-	public MultitexturedBlock2(String unlocalizedName, Material material) 
+	public CounterBlock(String unlocalizedName, Material material) 
 	{ 
 		super(material);
 		this.setBlockName(unlocalizedName);
@@ -113,9 +113,9 @@ public class MultitexturedBlock2 extends Block {
 	       if(!world.isRemote)
 	       {
 	           TileEntity tile = world.getTileEntity(x, y, z); // on obtient l'instance du TileEntity
-	           if(tile instanceof TileEntityTutoriel) // si le TileEntity est bien le nôtre (cette condition est importante pour éviter tout risque de corruption de monde, car il peut arriver qu'une mauvaise entité de bloc soit sur les coordonnées de votre bloc)
+	           if(tile instanceof TileEntityCounter) // si le TileEntity est bien le nôtre (cette condition est importante pour éviter tout risque de corruption de monde, car il peut arriver qu'une mauvaise entité de bloc soit sur les coordonnées de votre bloc)
 	           {
-	               TileEntityTutoriel tileTuto = (TileEntityTutoriel)tile; // on cast pour avoir accès au méthode qui se trouve dans TileEntityTutoriel
+	               TileEntityCounter tileTuto = (TileEntityCounter)tile; // on cast pour avoir accès au méthode qui se trouve dans TileEntityTutoriel
 	               if(side == 0) // si le côté est 0, donc en dessous, on appelle la fonction decrease pour diminuer la valeur
 	               {
 	                   tileTuto.decrease();
@@ -140,7 +140,7 @@ public class MultitexturedBlock2 extends Block {
 	   @Override
 	   public TileEntity createTileEntity(World world, int metadata)
 	   {
-	       return new TileEntityTutoriel();
+	       return new TileEntityCounter();
 	   }
 
 	   @Override
