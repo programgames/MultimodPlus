@@ -1,29 +1,25 @@
-[20:10:24] [main/INFO]: Setting user: programgames
-[20:10:25] [Client thread/INFO]: LWJGL Version: 2.9.1
-[20:10:32] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MultimodPlus, FMLFileResourcePack:Example Mod
-[20:10:33] [Sound Library Loader/INFO]: Sound engine started
-[20:10:33] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
-[20:10:33] [Client thread/INFO]: Created: 16x16 textures/items-atlas
-[20:10:33] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MultimodPlus, FMLFileResourcePack:Example Mod
-[20:10:34] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[20:10:34] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[20:10:34] [Sound Library Loader/INFO]: Sound engine started
-[20:10:39] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[20:10:39] [Server thread/INFO]: Generating keypair
-[20:10:39] [Server thread/INFO]: Preparing start region for level 0
-[20:10:40] [Server thread/INFO]: Changing view distance to 2, from 10
-[20:10:40] [Server thread/INFO]: programgames[local:E:f6b73fca] logged in with entity id 288 at (45.246876957474356, 59.0, 10.738255606564449)
-[20:10:40] [Server thread/INFO]: programgames joined the game
-[20:11:23] [Server thread/INFO]: Saving and pausing game...
-[20:11:23] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[20:11:23] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[20:11:23] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[20:11:43] [Client thread/INFO]: Stopping!
-[20:11:43] [Server thread/INFO]: Stopping server
-[20:11:43] [Server thread/INFO]: Saving players
-[20:11:43] [Server thread/INFO]: Saving worlds
-[20:11:43] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[20:11:43] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[20:11:43] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[20:11:44] [Client Shutdown Thread/INFO]: Stopping server
-[20:11:44] [Client Shutdown Thread/INFO]: Saving players
+[22:19:53] [main/INFO]: Setting user: programgames
+[22:19:54] [Client thread/INFO]: LWJGL Version: 2.9.1
+[22:20:01] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MultimodPlus, FMLFileResourcePack:Example Mod
+[22:20:01] [Sound Library Loader/INFO]: Sound engine started
+[22:20:02] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
+[22:20:02] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[22:20:02] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MultimodPlus, FMLFileResourcePack:Example Mod
+[22:20:02] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[22:20:02] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[22:20:03] [Sound Library Loader/INFO]: Sound engine started
+[22:20:06] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[22:20:06] [Server thread/INFO]: Generating keypair
+[22:20:06] [Server thread/INFO]: Preparing start region for level 0
+[22:20:07] [Server thread/INFO]: Changing view distance to 2, from 10
+[22:20:07] [Server thread/INFO]: programgames[local:E:da7485d7] logged in with entity id 284 at (45.16798121399101, 59.0, 12.341212105231078)
+[22:20:07] [Server thread/INFO]: programgames joined the game
+[22:20:28] [Client thread/INFO]: Stopping!
+[22:20:28] [Server thread/INFO]: Stopping server
+[22:20:28] [Server thread/INFO]: Saving players
+[22:20:28] [Server thread/INFO]: Saving worlds
+[22:20:28] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[22:20:28] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[22:20:28] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[22:20:28] [Client Shutdown Thread/INFO]: Stopping server
+[22:20:28] [Client Shutdown Thread/INFO]: Saving players
