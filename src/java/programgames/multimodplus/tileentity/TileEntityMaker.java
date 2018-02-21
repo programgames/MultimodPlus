@@ -5,19 +5,28 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import programgames.multimodplus.Main;
 import programgames.multimodplus.client.TileEntityChestSpecialRenderer;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TileEntityMaker register all the entities.
+ */
 public class TileEntityMaker {
 
 
-	public TileEntityCounter tileEntityTutoriel1;
-	
-	public static final void init() {
-		
-		GameRegistry.registerTileEntity(TileEntityCounter.class,Main.MODID + ":tile1");
+ 
+  public TileEntityCounter tileEntityTutoriel1;
 
-		GameRegistry.registerTileEntity(TileEntityChest.class,Main.MODID + ":tileVoid");
-		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityChest.class, new TileEntityChestSpecialRenderer());
+  /**
+   * Inits the maker.
+   */
+  public static final void init() {
+
+    GameRegistry.registerTileEntity(TileEntityCounter.class,Main.MODID + ":tile1");
+
+    GameRegistry.registerTileEntity(TileEntityChest.class,Main.MODID + ":tileVoid");
+    ClientRegistry.bindTileEntitySpecialRenderer(TileEntityChest.class,
+        new TileEntityChestSpecialRenderer());
 
 
-	}
+  }
 
 }
