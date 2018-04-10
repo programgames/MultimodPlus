@@ -1,0 +1,59 @@
+// class version 50.0 (50)
+// access flags 0x601
+public abstract interface THeatTransfer$$3 implements mekanism/api/IHeatTransfer  {
+
+
+  // access flags 0x401
+  public abstract THeatTransfer$$3$$impl()Lmekanism/api/IHeatTransfer;
+
+  // access flags 0x401
+  public abstract THeatTransfer$$3$$impl_$eq(Lmekanism/api/IHeatTransfer;)V
+
+  // access flags 0x401
+  public abstract bindPart(Lcodechicken/multipart/TMultiPart;)V
+
+  // access flags 0x401
+  public abstract THeatTransfer$$3$$super$bindPart(Lcodechicken/multipart/TMultiPart;)V
+
+  // access flags 0x401
+  public abstract partRemoved(Lcodechicken/multipart/TMultiPart;I)V
+
+  // access flags 0x401
+  public abstract THeatTransfer$$3$$super$partRemoved(Lcodechicken/multipart/TMultiPart;I)V
+
+  // access flags 0x401
+  public abstract canAddPart(Lcodechicken/multipart/TMultiPart;)Z
+
+  // access flags 0x401
+  public abstract THeatTransfer$$3$$super$canAddPart(Lcodechicken/multipart/TMultiPart;)Z
+
+  // access flags 0x401
+  public abstract getInsulationCoefficient(Lnet/minecraftforge/common/util/ForgeDirection;)D
+
+  // access flags 0x401
+  public abstract applyTemperatureChange()D
+
+  // access flags 0x401
+  public abstract getAdjacent(Lnet/minecraftforge/common/util/ForgeDirection;)Lmekanism/api/IHeatTransfer;
+
+  // access flags 0x401
+  public abstract canConnectHeat(Lnet/minecraftforge/common/util/ForgeDirection;)Z
+
+  // access flags 0x401
+  public abstract transferHeatTo(D)V
+
+  // access flags 0x401
+  public abstract getTemp()D
+
+  // access flags 0x401
+  public abstract getInverseConductionCoefficient()D
+
+  // access flags 0x401
+  public abstract simulateHeat()[D
+
+  // access flags 0x401
+  public abstract copyFrom(Lcodechicken/multipart/TileMultipart;)V
+
+  // access flags 0x401
+  public abstract THeatTransfer$$3$$super$copyFrom(Lcodechicken/multipart/TileMultipart;)V
+}

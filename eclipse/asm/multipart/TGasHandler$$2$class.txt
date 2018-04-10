@@ -1,0 +1,152 @@
+// class version 50.0 (50)
+// access flags 0x401
+public abstract class TGasHandler$$2$class {
+
+
+  // access flags 0x9
+  public static $init$(LTGasHandler$$2;)V
+    RETURN
+    MAXSTACK = 1
+    MAXLOCALS = 1
+
+  // access flags 0x9
+  public static bindPart(LTGasHandler$$2;Lcodechicken/multipart/TMultiPart;)V
+    ALOAD 0
+    ALOAD 1
+    INVOKEINTERFACE TGasHandler$$2.TGasHandler$$2$$super$bindPart (Lcodechicken/multipart/TMultiPart;)V
+    ALOAD 1
+    INSTANCEOF mekanism/api/gas/IGasHandler
+    IFEQ L0
+    ALOAD 0
+    ALOAD 1
+    CHECKCAST mekanism/api/gas/IGasHandler
+    INVOKEINTERFACE TGasHandler$$2.TGasHandler$$2$$impl_$eq (Lmekanism/api/gas/IGasHandler;)V
+   L0
+   FRAME FULL [TGasHandler$$2 codechicken/multipart/TMultiPart] []
+    RETURN
+    MAXSTACK = 2
+    MAXLOCALS = 2
+
+  // access flags 0x9
+  public static partRemoved(LTGasHandler$$2;Lcodechicken/multipart/TMultiPart;I)V
+    ALOAD 0
+    ALOAD 1
+    ILOAD 2
+    INVOKEINTERFACE TGasHandler$$2.TGasHandler$$2$$super$partRemoved (Lcodechicken/multipart/TMultiPart;I)V
+    ALOAD 1
+    ALOAD 0
+    INVOKEINTERFACE TGasHandler$$2.TGasHandler$$2$$impl ()Lmekanism/api/gas/IGasHandler;
+    IF_ACMPNE L0
+    ALOAD 0
+    ACONST_NULL
+    INVOKEINTERFACE TGasHandler$$2.TGasHandler$$2$$impl_$eq (Lmekanism/api/gas/IGasHandler;)V
+   L0
+   FRAME FULL [TGasHandler$$2 codechicken/multipart/TMultiPart I] []
+    RETURN
+    MAXSTACK = 3
+    MAXLOCALS = 3
+
+  // access flags 0x9
+  public static canAddPart(LTGasHandler$$2;Lcodechicken/multipart/TMultiPart;)Z
+    ALOAD 0
+    INVOKEINTERFACE TGasHandler$$2.TGasHandler$$2$$impl ()Lmekanism/api/gas/IGasHandler;
+    IFNULL L0
+    ALOAD 1
+    INSTANCEOF mekanism/api/gas/IGasHandler
+    IFEQ L0
+    ICONST_0
+    IRETURN
+   L0
+   FRAME FULL [TGasHandler$$2 codechicken/multipart/TMultiPart] []
+    ALOAD 0
+    ALOAD 1
+    INVOKEINTERFACE TGasHandler$$2.TGasHandler$$2$$super$canAddPart (Lcodechicken/multipart/TMultiPart;)Z
+    IRETURN
+    MAXSTACK = 2
+    MAXLOCALS = 2
+
+  // access flags 0x9
+  public static receiveGas(LTGasHandler$$2;Lnet/minecraftforge/common/util/ForgeDirection;Lmekanism/api/gas/GasStack;Z)I
+    ALOAD 0
+    INVOKEINTERFACE TGasHandler$$2.TGasHandler$$2$$impl ()Lmekanism/api/gas/IGasHandler;
+    ALOAD 1
+    ALOAD 2
+    ILOAD 3
+    INVOKEINTERFACE mekanism/api/gas/IGasHandler.receiveGas (Lnet/minecraftforge/common/util/ForgeDirection;Lmekanism/api/gas/GasStack;Z)I
+    IRETURN
+    MAXSTACK = 4
+    MAXLOCALS = 4
+
+  // access flags 0x9
+  public static canReceiveGas(LTGasHandler$$2;Lnet/minecraftforge/common/util/ForgeDirection;Lmekanism/api/gas/Gas;)Z
+    ALOAD 0
+    INVOKEINTERFACE TGasHandler$$2.TGasHandler$$2$$impl ()Lmekanism/api/gas/IGasHandler;
+    ALOAD 1
+    ALOAD 2
+    INVOKEINTERFACE mekanism/api/gas/IGasHandler.canReceiveGas (Lnet/minecraftforge/common/util/ForgeDirection;Lmekanism/api/gas/Gas;)Z
+    IRETURN
+    MAXSTACK = 3
+    MAXLOCALS = 3
+
+  // access flags 0x9
+  public static drawGas(LTGasHandler$$2;Lnet/minecraftforge/common/util/ForgeDirection;IZ)Lmekanism/api/gas/GasStack;
+    ALOAD 0
+    INVOKEINTERFACE TGasHandler$$2.TGasHandler$$2$$impl ()Lmekanism/api/gas/IGasHandler;
+    ALOAD 1
+    ILOAD 2
+    ILOAD 3
+    INVOKEINTERFACE mekanism/api/gas/IGasHandler.drawGas (Lnet/minecraftforge/common/util/ForgeDirection;IZ)Lmekanism/api/gas/GasStack;
+    ARETURN
+    MAXSTACK = 4
+    MAXLOCALS = 4
+
+  // access flags 0x9
+  public static drawGas(LTGasHandler$$2;Lnet/minecraftforge/common/util/ForgeDirection;I)Lmekanism/api/gas/GasStack;
+    ALOAD 0
+    INVOKEINTERFACE TGasHandler$$2.TGasHandler$$2$$impl ()Lmekanism/api/gas/IGasHandler;
+    ALOAD 1
+    ILOAD 2
+    INVOKEINTERFACE mekanism/api/gas/IGasHandler.drawGas (Lnet/minecraftforge/common/util/ForgeDirection;I)Lmekanism/api/gas/GasStack;
+    ARETURN
+    MAXSTACK = 3
+    MAXLOCALS = 3
+
+  // access flags 0x9
+  public static canDrawGas(LTGasHandler$$2;Lnet/minecraftforge/common/util/ForgeDirection;Lmekanism/api/gas/Gas;)Z
+    ALOAD 0
+    INVOKEINTERFACE TGasHandler$$2.TGasHandler$$2$$impl ()Lmekanism/api/gas/IGasHandler;
+    ALOAD 1
+    ALOAD 2
+    INVOKEINTERFACE mekanism/api/gas/IGasHandler.canDrawGas (Lnet/minecraftforge/common/util/ForgeDirection;Lmekanism/api/gas/Gas;)Z
+    IRETURN
+    MAXSTACK = 3
+    MAXLOCALS = 3
+
+  // access flags 0x9
+  public static receiveGas(LTGasHandler$$2;Lnet/minecraftforge/common/util/ForgeDirection;Lmekanism/api/gas/GasStack;)I
+    ALOAD 0
+    INVOKEINTERFACE TGasHandler$$2.TGasHandler$$2$$impl ()Lmekanism/api/gas/IGasHandler;
+    ALOAD 1
+    ALOAD 2
+    INVOKEINTERFACE mekanism/api/gas/IGasHandler.receiveGas (Lnet/minecraftforge/common/util/ForgeDirection;Lmekanism/api/gas/GasStack;)I
+    IRETURN
+    MAXSTACK = 3
+    MAXLOCALS = 3
+
+  // access flags 0x9
+  public static copyFrom(LTGasHandler$$2;Lcodechicken/multipart/TileMultipart;)V
+    ALOAD 0
+    ALOAD 1
+    INVOKEINTERFACE TGasHandler$$2.TGasHandler$$2$$super$copyFrom (Lcodechicken/multipart/TileMultipart;)V
+    ALOAD 1
+    INSTANCEOF TGasHandler$$2
+    IFEQ L0
+    ALOAD 0
+    ALOAD 1
+    INVOKEINTERFACE TGasHandler$$2.TGasHandler$$2$$impl ()Lmekanism/api/gas/IGasHandler;
+    INVOKEINTERFACE TGasHandler$$2.TGasHandler$$2$$impl_$eq (Lmekanism/api/gas/IGasHandler;)V
+   L0
+    RETURN
+    MAXSTACK = 2
+    MAXLOCALS = 2
+}

@@ -1,0 +1,41 @@
+// class version 50.0 (50)
+// access flags 0x601
+public abstract interface TTileNetwork$$9 implements mekanism/common/base/ITileNetwork  {
+
+
+  // access flags 0x401
+  public abstract TTileNetwork$$9$$impl()Lmekanism/common/base/ITileNetwork;
+
+  // access flags 0x401
+  public abstract TTileNetwork$$9$$impl_$eq(Lmekanism/common/base/ITileNetwork;)V
+
+  // access flags 0x401
+  public abstract bindPart(Lcodechicken/multipart/TMultiPart;)V
+
+  // access flags 0x401
+  public abstract TTileNetwork$$9$$super$bindPart(Lcodechicken/multipart/TMultiPart;)V
+
+  // access flags 0x401
+  public abstract partRemoved(Lcodechicken/multipart/TMultiPart;I)V
+
+  // access flags 0x401
+  public abstract TTileNetwork$$9$$super$partRemoved(Lcodechicken/multipart/TMultiPart;I)V
+
+  // access flags 0x401
+  public abstract canAddPart(Lcodechicken/multipart/TMultiPart;)Z
+
+  // access flags 0x401
+  public abstract TTileNetwork$$9$$super$canAddPart(Lcodechicken/multipart/TMultiPart;)Z
+
+  // access flags 0x401
+  public abstract handlePacketData(Lio/netty/buffer/ByteBuf;)V throws java/lang/Exception 
+
+  // access flags 0x401
+  public abstract getNetworkedData(Ljava/util/ArrayList;)Ljava/util/ArrayList;
+
+  // access flags 0x401
+  public abstract copyFrom(Lcodechicken/multipart/TileMultipart;)V
+
+  // access flags 0x401
+  public abstract TTileNetwork$$9$$super$copyFrom(Lcodechicken/multipart/TileMultipart;)V
+}

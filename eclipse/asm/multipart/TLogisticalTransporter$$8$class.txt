@@ -1,0 +1,415 @@
+// class version 50.0 (50)
+// access flags 0x401
+public abstract class TLogisticalTransporter$$8$class {
+
+
+  // access flags 0x9
+  public static $init$(LTLogisticalTransporter$$8;)V
+    RETURN
+    MAXSTACK = 1
+    MAXLOCALS = 1
+
+  // access flags 0x9
+  public static bindPart(LTLogisticalTransporter$$8;Lcodechicken/multipart/TMultiPart;)V
+    ALOAD 0
+    ALOAD 1
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$super$bindPart (Lcodechicken/multipart/TMultiPart;)V
+    ALOAD 1
+    INSTANCEOF mekanism/common/base/ILogisticalTransporter
+    IFEQ L0
+    ALOAD 0
+    ALOAD 1
+    CHECKCAST mekanism/common/base/ILogisticalTransporter
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl_$eq (Lmekanism/common/base/ILogisticalTransporter;)V
+   L0
+   FRAME FULL [TLogisticalTransporter$$8 codechicken/multipart/TMultiPart] []
+    RETURN
+    MAXSTACK = 2
+    MAXLOCALS = 2
+
+  // access flags 0x9
+  public static partRemoved(LTLogisticalTransporter$$8;Lcodechicken/multipart/TMultiPart;I)V
+    ALOAD 0
+    ALOAD 1
+    ILOAD 2
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$super$partRemoved (Lcodechicken/multipart/TMultiPart;I)V
+    ALOAD 1
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    IF_ACMPNE L0
+    ALOAD 0
+    ACONST_NULL
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl_$eq (Lmekanism/common/base/ILogisticalTransporter;)V
+   L0
+   FRAME FULL [TLogisticalTransporter$$8 codechicken/multipart/TMultiPart I] []
+    RETURN
+    MAXSTACK = 3
+    MAXLOCALS = 3
+
+  // access flags 0x9
+  public static canAddPart(LTLogisticalTransporter$$8;Lcodechicken/multipart/TMultiPart;)Z
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    IFNULL L0
+    ALOAD 1
+    INSTANCEOF mekanism/common/base/ILogisticalTransporter
+    IFEQ L0
+    ICONST_0
+    IRETURN
+   L0
+   FRAME FULL [TLogisticalTransporter$$8 codechicken/multipart/TMultiPart] []
+    ALOAD 0
+    ALOAD 1
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$super$canAddPart (Lcodechicken/multipart/TMultiPart;)Z
+    IRETURN
+    MAXSTACK = 2
+    MAXLOCALS = 2
+
+  // access flags 0x9
+  public static getTransmitterNetworkSize(LTLogisticalTransporter$$8;)I
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.getTransmitterNetworkSize ()I
+    IRETURN
+    MAXSTACK = 1
+    MAXLOCALS = 1
+
+  // access flags 0x9
+  public static getTransmitterNetworkAcceptorSize(LTLogisticalTransporter$$8;)I
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.getTransmitterNetworkAcceptorSize ()I
+    IRETURN
+    MAXSTACK = 1
+    MAXLOCALS = 1
+
+  // access flags 0x9
+  public static getTransmitterNetworkBuffer(LTLogisticalTransporter$$8;)Ljava/lang/String;
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.getTransmitterNetworkBuffer ()Ljava/lang/String;
+    ARETURN
+    MAXSTACK = 1
+    MAXLOCALS = 1
+
+  // access flags 0x9
+  public static getCapacity(LTLogisticalTransporter$$8;)I
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.getCapacity ()I
+    IRETURN
+    MAXSTACK = 1
+    MAXLOCALS = 1
+
+  // access flags 0x9
+  public static entityEntering(LTLogisticalTransporter$$8;Lmekanism/common/content/transporter/TransporterStack;I)V
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    ALOAD 1
+    ILOAD 2
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.entityEntering (Lmekanism/common/content/transporter/TransporterStack;I)V
+    RETURN
+    MAXSTACK = 3
+    MAXLOCALS = 3
+
+  // access flags 0x9
+  public static getTransmitterNetworkFlow(LTLogisticalTransporter$$8;)Ljava/lang/String;
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.getTransmitterNetworkFlow ()Ljava/lang/String;
+    ARETURN
+    MAXSTACK = 1
+    MAXLOCALS = 1
+
+  // access flags 0x9
+  public static insert(LTLogisticalTransporter$$8;Lmekanism/api/Coord4D;Lnet/minecraft/item/ItemStack;Lmekanism/api/EnumColor;ZI)Lnet/minecraft/item/ItemStack;
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    ALOAD 1
+    ALOAD 2
+    ALOAD 3
+    ILOAD 4
+    ILOAD 5
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.insert (Lmekanism/api/Coord4D;Lnet/minecraft/item/ItemStack;Lmekanism/api/EnumColor;ZI)Lnet/minecraft/item/ItemStack;
+    ARETURN
+    MAXSTACK = 6
+    MAXLOCALS = 6
+
+  // access flags 0x9
+  public static canReceiveFrom(LTLogisticalTransporter$$8;Lnet/minecraft/tileentity/TileEntity;Lnet/minecraftforge/common/util/ForgeDirection;)Z
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    ALOAD 1
+    ALOAD 2
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.canReceiveFrom (Lnet/minecraft/tileentity/TileEntity;Lnet/minecraftforge/common/util/ForgeDirection;)Z
+    IRETURN
+    MAXSTACK = 3
+    MAXLOCALS = 3
+
+  // access flags 0x9
+  public static createEmptyNetwork(LTLogisticalTransporter$$8;)Lmekanism/api/transmitters/DynamicNetwork;
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.createEmptyNetwork ()Lmekanism/api/transmitters/DynamicNetwork;
+    ARETURN
+    MAXSTACK = 1
+    MAXLOCALS = 1
+
+  // access flags 0x9
+  public static setTransmitterNetwork(LTLogisticalTransporter$$8;Lmekanism/api/transmitters/DynamicNetwork;)V
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    ALOAD 1
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.setTransmitterNetwork (Lmekanism/api/transmitters/DynamicNetwork;)V
+    RETURN
+    MAXSTACK = 2
+    MAXLOCALS = 2
+
+  // access flags 0x9
+  public static canEmitTo(LTLogisticalTransporter$$8;Lnet/minecraft/tileentity/TileEntity;Lnet/minecraftforge/common/util/ForgeDirection;)Z
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    ALOAD 1
+    ALOAD 2
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.canEmitTo (Lnet/minecraft/tileentity/TileEntity;Lnet/minecraftforge/common/util/ForgeDirection;)Z
+    IRETURN
+    MAXSTACK = 3
+    MAXLOCALS = 3
+
+  // access flags 0x9
+  public static setColor(LTLogisticalTransporter$$8;Lmekanism/api/EnumColor;)V
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    ALOAD 1
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.setColor (Lmekanism/api/EnumColor;)V
+    RETURN
+    MAXSTACK = 2
+    MAXLOCALS = 2
+
+  // access flags 0x9
+  public static getTransmitterNetworkCapacity(LTLogisticalTransporter$$8;)D
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.getTransmitterNetworkCapacity ()D
+    DRETURN
+    MAXSTACK = 2
+    MAXLOCALS = 1
+
+  // access flags 0x9
+  public static getTransmissionType(LTLogisticalTransporter$$8;)Lmekanism/api/transmitters/TransmissionType;
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.getTransmissionType ()Lmekanism/api/transmitters/TransmissionType;
+    ARETURN
+    MAXSTACK = 1
+    MAXLOCALS = 1
+
+  // access flags 0x9
+  public static setOrphan(LTLogisticalTransporter$$8;Z)V
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    ILOAD 1
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.setOrphan (Z)V
+    RETURN
+    MAXSTACK = 2
+    MAXLOCALS = 2
+
+  // access flags 0x9
+  public static getAdjacentConnectableTransmitterCoord(LTLogisticalTransporter$$8;Lnet/minecraftforge/common/util/ForgeDirection;)Lmekanism/api/Coord4D;
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    ALOAD 1
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.getAdjacentConnectableTransmitterCoord (Lnet/minecraftforge/common/util/ForgeDirection;)Lmekanism/api/Coord4D;
+    ARETURN
+    MAXSTACK = 2
+    MAXLOCALS = 2
+
+  // access flags 0x9
+  public static world(LTLogisticalTransporter$$8;)Lnet/minecraft/world/World;
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.world ()Lnet/minecraft/world/World;
+    ARETURN
+    MAXSTACK = 1
+    MAXLOCALS = 1
+
+  // access flags 0x9
+  public static getCost(LTLogisticalTransporter$$8;)D
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.getCost ()D
+    DRETURN
+    MAXSTACK = 2
+    MAXLOCALS = 1
+
+  // access flags 0x9
+  public static getAcceptor(LTLogisticalTransporter$$8;Lnet/minecraftforge/common/util/ForgeDirection;)Ljava/lang/Object;
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    ALOAD 1
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.getAcceptor (Lnet/minecraftforge/common/util/ForgeDirection;)Ljava/lang/Object;
+    ARETURN
+    MAXSTACK = 2
+    MAXLOCALS = 2
+
+  // access flags 0x9
+  public static hasTransmitterNetwork(LTLogisticalTransporter$$8;)Z
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.hasTransmitterNetwork ()Z
+    IRETURN
+    MAXSTACK = 1
+    MAXLOCALS = 1
+
+  // access flags 0x9
+  public static isOrphan(LTLogisticalTransporter$$8;)Z
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.isOrphan ()Z
+    IRETURN
+    MAXSTACK = 1
+    MAXLOCALS = 1
+
+  // access flags 0x9
+  public static getColor(LTLogisticalTransporter$$8;)Lmekanism/api/EnumColor;
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.getColor ()Lmekanism/api/EnumColor;
+    ARETURN
+    MAXSTACK = 1
+    MAXLOCALS = 1
+
+  // access flags 0x9
+  public static coord(LTLogisticalTransporter$$8;)Lmekanism/api/Coord4D;
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.coord ()Lmekanism/api/Coord4D;
+    ARETURN
+    MAXSTACK = 1
+    MAXLOCALS = 1
+
+  // access flags 0x9
+  public static isValid(LTLogisticalTransporter$$8;)Z
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.isValid ()Z
+    IRETURN
+    MAXSTACK = 1
+    MAXLOCALS = 1
+
+  // access flags 0x9
+  public static getBuffer(LTLogisticalTransporter$$8;)Ljava/lang/Object;
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.getBuffer ()Ljava/lang/Object;
+    ARETURN
+    MAXSTACK = 1
+    MAXLOCALS = 1
+
+  // access flags 0x9
+  public static takeShare(LTLogisticalTransporter$$8;)V
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.takeShare ()V
+    RETURN
+    MAXSTACK = 1
+    MAXLOCALS = 1
+
+  // access flags 0x9
+  public static canConnect(LTLogisticalTransporter$$8;Lnet/minecraftforge/common/util/ForgeDirection;)Z
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    ALOAD 1
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.canConnect (Lnet/minecraftforge/common/util/ForgeDirection;)Z
+    IRETURN
+    MAXSTACK = 2
+    MAXLOCALS = 2
+
+  // access flags 0x9
+  public static insertRR(LTLogisticalTransporter$$8;Lmekanism/common/tile/TileEntityLogisticalSorter;Lnet/minecraft/item/ItemStack;Lmekanism/api/EnumColor;ZI)Lnet/minecraft/item/ItemStack;
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    ALOAD 1
+    ALOAD 2
+    ALOAD 3
+    ILOAD 4
+    ILOAD 5
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.insertRR (Lmekanism/common/tile/TileEntityLogisticalSorter;Lnet/minecraft/item/ItemStack;Lmekanism/api/EnumColor;ZI)Lnet/minecraft/item/ItemStack;
+    ARETURN
+    MAXSTACK = 6
+    MAXLOCALS = 6
+
+  // access flags 0x9
+  public static canConnectMutual(LTLogisticalTransporter$$8;Lnet/minecraftforge/common/util/ForgeDirection;)Z
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    ALOAD 1
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.canConnectMutual (Lnet/minecraftforge/common/util/ForgeDirection;)Z
+    IRETURN
+    MAXSTACK = 2
+    MAXLOCALS = 2
+
+  // access flags 0x9
+  public static mergeNetworks(LTLogisticalTransporter$$8;Ljava/util/Collection;)Lmekanism/api/transmitters/DynamicNetwork;
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    ALOAD 1
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.mergeNetworks (Ljava/util/Collection;)Lmekanism/api/transmitters/DynamicNetwork;
+    ARETURN
+    MAXSTACK = 2
+    MAXLOCALS = 2
+
+  // access flags 0x9
+  public static getTransmitterNetworkNeeded(LTLogisticalTransporter$$8;)Ljava/lang/String;
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.getTransmitterNetworkNeeded ()Ljava/lang/String;
+    ARETURN
+    MAXSTACK = 1
+    MAXLOCALS = 1
+
+  // access flags 0x9
+  public static getExternalNetwork(LTLogisticalTransporter$$8;Lmekanism/api/Coord4D;)Lmekanism/api/transmitters/DynamicNetwork;
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    ALOAD 1
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.getExternalNetwork (Lmekanism/api/Coord4D;)Lmekanism/api/transmitters/DynamicNetwork;
+    ARETURN
+    MAXSTACK = 2
+    MAXLOCALS = 2
+
+  // access flags 0x9
+  public static getTransmitterNetwork(LTLogisticalTransporter$$8;)Lmekanism/api/transmitters/DynamicNetwork;
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.getTransmitterNetwork ()Lmekanism/api/transmitters/DynamicNetwork;
+    ARETURN
+    MAXSTACK = 1
+    MAXLOCALS = 1
+
+  // access flags 0x9
+  public static updateShare(LTLogisticalTransporter$$8;)V
+    ALOAD 0
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    INVOKEINTERFACE mekanism/common/base/ILogisticalTransporter.updateShare ()V
+    RETURN
+    MAXSTACK = 1
+    MAXLOCALS = 1
+
+  // access flags 0x9
+  public static copyFrom(LTLogisticalTransporter$$8;Lcodechicken/multipart/TileMultipart;)V
+    ALOAD 0
+    ALOAD 1
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$super$copyFrom (Lcodechicken/multipart/TileMultipart;)V
+    ALOAD 1
+    INSTANCEOF TLogisticalTransporter$$8
+    IFEQ L0
+    ALOAD 0
+    ALOAD 1
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl ()Lmekanism/common/base/ILogisticalTransporter;
+    INVOKEINTERFACE TLogisticalTransporter$$8.TLogisticalTransporter$$8$$impl_$eq (Lmekanism/common/base/ILogisticalTransporter;)V
+   L0
+    RETURN
+    MAXSTACK = 2
+    MAXLOCALS = 2
+}
