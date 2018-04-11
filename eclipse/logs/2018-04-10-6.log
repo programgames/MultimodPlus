@@ -1,6 +1,0 @@
-[18:08:37] [main/INFO]: Setting user: Player431
-[18:08:39] [Client thread/INFO]: LWJGL Version: 2.9.1
-[18:08:48] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MultimodPlus, FMLFileResourcePack:BuildCraft, FMLFileResourcePack:BC Transport, FMLFileResourcePack:BC Factory, FMLFileResourcePack:BC Silicon, FMLFileResourcePack:BC Robotics, FMLFileResourcePack:BC Energy, FMLFileResourcePack:BC Builders, FMLFileResourcePack:Mekanism, FMLFileResourcePack:MekanismGenerators, FMLFileResourcePack:MekanismTools, FMLFileResourcePack:Tinkers' Construct, FMLFileResourcePack:Forge Microblocks, FMLFileResourcePack:Forge Multipart, FMLFileResourcePack:Minecraft Multipart Plugin
-[18:08:49] [Sound Library Loader/INFO]: Sound engine started
-[18:08:50] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
-[18:08:50] [Client thread/INFO]: Created: 16x16 textures/items-atlas

@@ -1,0 +1,8 @@
+{
+  "play_alarm": {
+    "category": "block",
+    "subtitle": "multimodplus.subtitle.open_alarm",
+    "sounds": [ "multimodplus:open_alarm" ]
+  }
+
+}

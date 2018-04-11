@@ -85,13 +85,20 @@ key_key.hotbar.6:7
 key_key.hotbar.7:8
 key_key.hotbar.8:9
 key_key.hotbar.9:10
+key_Mekanism Item Mode Switch:50
+key_Mekanism Armor Mode Switch:33
+key_Mekanism Voice:22
+key_key.tarmor:24
+key_key.tgoggles:34
+key_key.tbelt:48
+key_key.tzoom:44
 key_key.control:29
-soundCategory_master:0.0
+soundCategory_master:0.20860927
 soundCategory_music:1.0
 soundCategory_record:1.0
 soundCategory_weather:1.0
 soundCategory_block:1.0
 soundCategory_hostile:1.0
 soundCategory_neutral:1.0
-soundCategory_player:1.0
+soundCategory_player:0.62676054
 soundCategory_ambient:1.0

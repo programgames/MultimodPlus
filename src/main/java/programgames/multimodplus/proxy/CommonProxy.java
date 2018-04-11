@@ -9,6 +9,7 @@ import programgames.multimodplus.client.RenderInventoryMaker;
 import programgames.multimodplus.crafting.CraftingMaker;
 import programgames.multimodplus.gui.GuiMaker;
 import programgames.multimodplus.item.ItemMaker;
+import programgames.multimodplus.sounds.SoundMaker;
 import programgames.multimodplus.tileentity.TileEntityMaker;
 import programgames.multimodplus.world.Worldgen;
 
@@ -33,6 +34,8 @@ public class CommonProxy {
     TileEntityMaker.init();
     RenderInventoryMaker.init();
     GuiMaker.init();
+    SoundMaker.init();
+
 
   }
 
