@@ -63,4 +63,5 @@ public class TileEntityChestSpecialRenderer extends TileEntitySpecialRenderer {
     model.renderAll();
     GL11.glPopMatrix();
   }
+
 }

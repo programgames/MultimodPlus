@@ -1,11 +1,13 @@
 package programgames.multimodplus.block;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockDispenser;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.client.event.sound.SoundEvent;
 import programgames.multimodplus.Main;
@@ -45,7 +47,9 @@ public class AlarmBlock extends Block {
     public void onEntityCollidedWithBlock(World world, int i, int j, int k, Entity entity) {
 
         System.out.printf("Musique");
+
         entity.playSound("multimodplus:play_alarm", getSoundVolume(),getSoundPitch());
+
     }
     protected float getSoundVolume()
     {
@@ -55,4 +59,20 @@ public class AlarmBlock extends Block {
     {
         return 1.0F;
     }
+
+    @Override
+    public void onNeighborBlockChange(World w, int x, int y, int z, Block b) {
+        if(w.isBlockIndirectlyGettingPowered(x, y, z)) {
+            w.playSound(x,y,z,"multimodplus:play_alarm",getSoundVolume(),getSoundPitch(),true);
+
+        }
+    }
+
+    @Override
+    public boolean canConnectRedstone(IBlockAccess world, int x, int y, int z, int side) {
+
+            return true;
+    }
+
+
 }

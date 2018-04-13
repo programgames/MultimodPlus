@@ -12,19 +12,52 @@ buildscript {
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
+		classpath 'org.junit.platform:junit-platform-gradle-plugin:1.1.0'
+
+		
+	
     }
 }
 
 apply plugin: 'forge'
+apply plugin: 'java'
+apply plugin: 'org.junit.platform.gradle.plugin'
 
-version = "1.0"
-group= "com.yourname.modid" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "modid"
+//gradlew findbugsMain | findbugsTest | findbugsSourceSet
+apply plugin: 'findbugs'
+
+//gradlew checkstyleMain | checkstyleTest | checkstyleSourceSet
+apply plugin: 'checkstyle'
+
+//graldew pmdMain | pmdTest | pmdSourceSet
+apply plugin: 'pmd'
+
+
+//gradlew check | build | test
+
+version = "1.1"
+group= "com.programgames.multimodplus" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "multimodplus"
 
 minecraft {
     version = "1.7.10-10.13.4.1614-1.7.10"
     runDir = "eclipse"
 }
+checkstyle {
+    configFile = file("${project.rootDir}/config/checkstyle.xml")
+    toolVersion = '6.7'
+}
+pmd {
+  toolVersion = '4.3'
+  ignoreFailures = true
+  sourceSets = [sourceSets.main]
+  reportsDir = file("$project.buildDir/reports/pmd")
+  ruleSets = [
+    "basic",
+    "braces"
+  ]
+}
+
 
 dependencies {
     // you may put jars on which you depend on in ./libs
@@ -39,6 +72,12 @@ dependencies {
     // for more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
+	 testCompile(
+            'org.junit.jupiter:junit-jupiter-api:5.1.0'
+    )
+    testRuntime(
+            'org.junit.jupiter:junit-jupiter-engine:5.1.0'
+    )
 
 }
 
@@ -61,5 +100,10 @@ processResources
         exclude 'mcmod.info'
     }
 }
+
+test {
+    //useJUnitPlatform()
+}
+
 idea { module { inheritOutputDirs = true } }
 
