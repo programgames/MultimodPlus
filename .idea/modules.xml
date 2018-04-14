@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MultimodPlus.iml" filepath="$PROJECT_DIR$/MultimodPlus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MultimodPlus.iml" filepath="$PROJECT_DIR$/MultimodPlus.iml" group="MultimodPlus" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/MultimodPlus_api.iml" filepath="$PROJECT_DIR$/.idea/modules/MultimodPlus_api.iml" group="MultimodPlus" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/MultimodPlus_main.iml" filepath="$PROJECT_DIR$/.idea/modules/MultimodPlus_main.iml" group="MultimodPlus" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/MultimodPlus_test.iml" filepath="$PROJECT_DIR$/.idea/modules/MultimodPlus_test.iml" group="MultimodPlus" />
