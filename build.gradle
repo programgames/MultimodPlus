@@ -17,6 +17,7 @@ buildscript {
 		
 	
     }
+	
 }
 
 apply plugin: 'forge'
@@ -46,6 +47,8 @@ minecraft {
 checkstyle {
     configFile = file("${project.rootDir}/config/checkstyle.xml")
     toolVersion = '6.7'
+	 ignoreFailures true
+
 }
 pmd {
   toolVersion = '4.3'
@@ -106,4 +109,7 @@ test {
 }
 
 idea { module { inheritOutputDirs = true } }
+findbugs {
+ignoreFailures true
+}
 
