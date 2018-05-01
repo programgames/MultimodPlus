@@ -34,6 +34,8 @@ class OverPoweredEnergieCube extends Block {
   public TileEntity createTileEntity(World world, int metadata) {
     return new TileEntityOverPoweredEnergieCube(800);
   }
+
+
   public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase living,
       ItemStack stack) {
     

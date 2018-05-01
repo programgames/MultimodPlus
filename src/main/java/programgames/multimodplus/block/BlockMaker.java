@@ -22,6 +22,7 @@ public class BlockMaker {
   public static Block cube;
   public static Block transporter;
   public static Block alarm;
+  public static Block detector;
 
   /**
    * Function called in the proxy.
@@ -47,5 +48,8 @@ public class BlockMaker {
     GameRegistry.registerBlock(cube = new UltimateEnergyTransporter("Energy Transporter", Material.rock),"Energy Transporter");
 
     GameRegistry.registerBlock(alarm = new AlarmBlock("Alarm", Material.rock),"Alarm");
+
+    GameRegistry.registerBlock(detector = new BlockDetector("blockdetector", Material.cloth), "Bloc detector");
+
   }
 }

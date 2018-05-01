@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id="multimodplus:test" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="GRADLE" external.system.module.group="com.programgames.multimodplus" external.system.module.type="sourceSet" external.system.module.version="1.1" type="JAVA_MODULE" version="4">
-  <component name="FacetManager">
-    <facet type="minecraft" name="Minecraft">
-      <configuration>
-        <autoDetectTypes>
-          <platformType>MCP</platformType>
-        </autoDetectTypes>
-      </configuration>
-    </facet>
-  </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="true">
+<module external.linked.project.id="multimodplus:main" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$" external.system.id="GRADLE" external.system.module.group="com.programgames.multimodplus" external.system.module.type="sourceSet" external.system.module.version="1.1" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_6" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../src/test">
-      <sourceFolder url="file://$MODULE_DIR$/../../src/test/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../../src/test/resources" type="java-test-resource" />
+    <content url="file://$MODULE_DIR$/src/main">
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="multimodplus_main" />
     <orderEntry type="module" module-name="multimodplus_api" />
     <orderEntry type="library" name="Gradle: :forgeSrc:1.7.10-10.13.4.1614-1.7.10" level="project" />
     <orderEntry type="library" name="Gradle: net.minecraft:launchwrapper:1.12" level="project" />
@@ -72,11 +62,9 @@
     <orderEntry type="library" name="Gradle: org.lwjgl.lwjgl:lwjgl:2.9.1" level="project" />
     <orderEntry type="library" name="Gradle: org.lwjgl.lwjgl:lwjgl_util:2.9.1" level="project" />
     <orderEntry type="library" name="Gradle: tv.twitch:twitch:5.16" level="project" />
-    <orderEntry type="library" name="Gradle: org.junit.jupiter:junit-jupiter-api:5.1.0" level="project" />
     <orderEntry type="library" name="Gradle: org.scala-lang:scala-actors:2.11.0" level="project" />
     <orderEntry type="library" name="Gradle: org.scala-lang.modules:scala-xml_2.11:1.0.2" level="project" />
     <orderEntry type="library" name="Gradle: org.scala-lang.modules:scala-parser-combinators_2.11:1.0.1" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.junit.jupiter:junit-jupiter-engine:5.1.0" level="project" />
     <orderEntry type="library" name="Gradle: net.java.jinput:jinput-platform:natives-linux:2.0.5" level="project" />
     <orderEntry type="library" name="Gradle: net.java.jinput:jinput-platform:natives-windows:2.0.5" level="project" />
     <orderEntry type="library" name="Gradle: net.java.jinput:jinput-platform:natives-osx:2.0.5" level="project" />
@@ -85,13 +73,8 @@
     <orderEntry type="library" name="Gradle: tv.twitch:twitch-platform:natives-osx:5.16" level="project" />
     <orderEntry type="library" name="Gradle: tv.twitch:twitch-external-platform:natives-windows-32:4.5" level="project" />
     <orderEntry type="library" name="Gradle: tv.twitch:twitch-external-platform:natives-windows-64:4.5" level="project" />
-    <orderEntry type="library" name="Gradle: org.apiguardian:apiguardian-api:1.0.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.opentest4j:opentest4j:1.0.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.junit.platform:junit-platform-commons:1.1.0" level="project" />
     <orderEntry type="library" name="Gradle: org.lwjgl.lwjgl:lwjgl-platform:natives-windows:2.9.1" level="project" />
     <orderEntry type="library" name="Gradle: org.lwjgl.lwjgl:lwjgl-platform:natives-linux:2.9.1" level="project" />
     <orderEntry type="library" name="Gradle: org.lwjgl.lwjgl:lwjgl-platform:natives-osx:2.9.1" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.junit.platform:junit-platform-engine:1.1.0" level="project" />
   </component>
-  <component name="TestModuleProperties" production-module="multimodplus_main" />
 </module>

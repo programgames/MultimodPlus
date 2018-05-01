@@ -1,4 +1,3 @@
-< en_US.lang - English localization file for the mod Tutorial >
 item.firstItem.name=Tutorial Item
 tile.texture.name=Tutorial Block
 tile.texture_1.name=Metablock 1 (White)
@@ -14,3 +13,9 @@ tile.tutoriel4.number=Value : %d
 tile.tutoriel5.number=Value : %d
 tile.tutoriel6.number=Value : %d
 tile.chest.direction=Direction : %d
+tile.blockdetector_0.name=Metablock 0 (White)
+tile.blockdetector_1.name=Metablock 1 (Black)
+tile.blockdetector_2.name=Metablock 2 (Red)
+tile.blockdetector_3.name=Metablock 3 (Green)
+tile.blockdetector_4.name=Metablock 4 (Yellow)
+tile.blockdetector_5.name=Metablock 5 (Blue)

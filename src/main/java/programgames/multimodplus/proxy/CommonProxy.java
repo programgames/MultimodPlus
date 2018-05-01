@@ -4,8 +4,10 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraftforge.common.MinecraftForge;
 import programgames.multimodplus.block.BlockMaker;
 import programgames.multimodplus.client.RenderInventoryMaker;
+import programgames.multimodplus.common.EventHandler;
 import programgames.multimodplus.crafting.CraftingMaker;
 import programgames.multimodplus.gui.GuiMaker;
 import programgames.multimodplus.item.ItemMaker;
@@ -23,9 +25,9 @@ public class CommonProxy {
   /**
    * Fonction de pre init du proxy.
    * 
-   * @param e de forge de pre initialisation
+   * @param event de forge de pre initialisation
    */
-  public void preInit(FMLPreInitializationEvent e) {
+  public void preInit(FMLPreInitializationEvent event) {
 
     ItemMaker.init();
     BlockMaker.init();
@@ -33,6 +35,10 @@ public class CommonProxy {
     TileEntityMaker.init();
     RenderInventoryMaker.init();
     GuiMaker.init();
+    if(event.getSide().isClient())
+    {
+      MinecraftForge.EVENT_BUS.register(new EventHandler());
+    }
 
   }
 

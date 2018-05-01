@@ -35,7 +35,7 @@ public class Main {
   public static final String VERSION = "2.0.0";
 
   /**
-   * Instance du mod.Sert a acceder au mod id ...  a partir des autres classes. 
+   * Instance du mod.Sert a acceder au mod id ...  a partir des autres classes.
    */
   @Instance("multimodplus")
   public static Main instance = new Main();

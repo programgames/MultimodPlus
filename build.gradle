@@ -38,6 +38,8 @@ apply plugin: 'pmd'
 version = "1.1"
 group= "com.programgames.multimodplus" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "multimodplus"
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
 
 minecraft {
     version = "1.7.10-10.13.4.1614-1.7.10"

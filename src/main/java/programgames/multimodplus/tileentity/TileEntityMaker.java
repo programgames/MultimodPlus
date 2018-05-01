@@ -27,6 +27,9 @@ public class TileEntityMaker {
         new TileEntityChestSpecialRenderer());
     
     GameRegistry.registerTileEntity(TileEntityOverPoweredEnergieCube.class,Main.MODID + ":tilecube");
+    GameRegistry.registerTileEntity(TileEntityDetector.class,Main.MODID + ":tiledetector");
+
+
 
 
   }
