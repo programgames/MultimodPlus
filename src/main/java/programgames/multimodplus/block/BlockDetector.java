@@ -1,14 +1,8 @@
 package programgames.multimodplus.block;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-
-import java.util.Random;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockAir;
 import net.minecraft.block.BlockContainer;
-import net.minecraft.block.BlockRedstoneOre;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -31,16 +25,13 @@ public class BlockDetector  extends BlockContainer {
   private IIcon sides;
   private IIcon front;
 
-  private boolean isBlockConnected;
 
-  private boolean isBlockConnected() {
-    return isBlockConnected;
-  }
-
-  public void setBlockConnected(boolean blockConnected) {
-    isBlockConnected = blockConnected;
-  }
-
+  /**
+   * Constructor of the Block.
+   *
+   * @param unlocalizedName the unlocalizedName
+   * @param material material
+   */
   public BlockDetector(String unlocalizedName, Material material) {
     super(material);
     this.setBlockName(unlocalizedName);
@@ -49,7 +40,6 @@ public class BlockDetector  extends BlockContainer {
     this.setResistance(6.0F);
     setHarvestLevel("pickaxe", 3);
     this.setStepSound(soundTypeGravel);
-    this.isBlockConnected = false;
   }
 
   /**
@@ -64,7 +54,7 @@ public class BlockDetector  extends BlockContainer {
   @Override
   public int isProvidingWeakPower(IBlockAccess blockAccess, int x, int y, int z, int side) {
 
-    if (side == 1 && this.isBlockConnected) {
+    if (side == 1 && ((TileEntityDetector)blockAccess.getTileEntity(x,y,z)).isConnected) {
       return 15;
     } else {
       return 0;
@@ -72,33 +62,6 @@ public class BlockDetector  extends BlockContainer {
 
   }
 
-  /**
-   * Ticks the block if it's been scheduled.
-   * @param world The world object
-   * @param x coordinate
-   * @param y coordinate
-   * @param z coordinate
-   * @param r RandomTick
-   */
-  public void updateTick(World world, int x, int y, int z, Random r) {
-    if ((world.getBlock(x, y + 1, z) != null)
-            && !(world.getBlock(x, y + 1, z) instanceof BlockAir)) {
-      setBlockConnected(true);
-    }
-    System.out.println("updated");
-  }
-
-  /**
-   * How many world ticks before ticking.
-   *
-   * @param world The World.
-   */
-  @Override
-  public int tickRate(World world) {
-    return  20;
-  }
-
-  @SideOnly(Side.CLIENT)
   @Override
   public void registerBlockIcons(IIconRegister iconRegister) {
     this.top = iconRegister.registerIcon("multimodplus:collector_top");
@@ -177,7 +140,11 @@ public class BlockDetector  extends BlockContainer {
     if (world.isRemote) {
       return true;
     } else {
-      player.addChatMessage(new ChatComponentText("Connection de block : " + isBlockConnected()));
+      player.addChatMessage(new ChatComponentText("Connection de block : "
+              + ((TileEntityDetector)world.getTileEntity(x,y,z)).isConnected));
+      player.addChatMessage(new ChatComponentText("Tile Entity : "
+              + ((TileEntityDetector)world.getTileEntity(x,y,z)).toString()));
+
       return true;
     }
   }
@@ -226,14 +193,8 @@ public class BlockDetector  extends BlockContainer {
       if (l == 3) {
         machine.setFacing(4);
       }
-
-      if ((world.getBlock(x, y + 1, z) != null)
-              && !(world.getBlock(x, y + 1, z) instanceof BlockAir)) {
-        setBlockConnected(true);
-      }
     }
   }
-
 
   /**
    * Called when block is broken.

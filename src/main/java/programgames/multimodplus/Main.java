@@ -34,6 +34,7 @@ public class Main {
    */
   public static final String VERSION = "2.0.0";
 
+
   /**
    * Instance du mod.Sert a acceder au mod id ...  a partir des autres classes.
    */
@@ -63,6 +64,7 @@ public class Main {
     * In this method we should read your config file, create Blocks, Items, etc. and register
     * them with the GameRegistry.
     **/
+
     proxy.preInit(e);
 
   }

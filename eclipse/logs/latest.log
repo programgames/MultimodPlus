@@ -1,27 +1,109 @@
-[16:45:00] [main/INFO]: Setting user: Player377
-[16:45:02] [Client thread/INFO]: LWJGL Version: 2.9.1
-[16:45:08] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MultimodPlus
-[16:45:10] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
-[16:45:10] [Client thread/INFO]: Created: 16x16 textures/items-atlas
-[16:45:10] [Sound Library Loader/INFO]: Sound engine started
-[16:45:10] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MultimodPlus
-[16:45:10] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[16:45:10] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[16:45:11] [Sound Library Loader/INFO]: Sound engine started
-[16:45:14] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[16:45:14] [Server thread/INFO]: Generating keypair
-[16:45:14] [Server thread/INFO]: Preparing start region for level 0
-[16:45:15] [Server thread/INFO]: Changing view distance to 12, from 10
-[16:45:16] [Server thread/INFO]: Player377[local:E:2776e1ce] logged in with entity id 264 at (-70.14681911110402, 71.0, 222.41547537765632)
-[16:45:16] [Server thread/INFO]: Player377 joined the game
-[16:46:04] [Server thread/INFO]: Saving and pausing game...
-[16:46:04] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[16:46:04] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[16:46:04] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[16:46:04] [Server thread/INFO]: Stopping server
-[16:46:04] [Server thread/INFO]: Saving players
-[16:46:04] [Server thread/INFO]: Saving worlds
-[16:46:04] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[16:46:04] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[16:46:04] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[16:46:06] [Client thread/INFO]: Stopping!
+[21:57:31] [main/INFO]: Setting user: Player885
+[21:57:32] [Client thread/INFO]: LWJGL Version: 2.9.1
+[21:57:39] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MultimodPlus
+[21:57:40] [Sound Library Loader/INFO]: Sound engine started
+[21:57:40] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
+[21:57:40] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[21:57:40] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MultimodPlus
+[21:57:41] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[21:57:41] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[21:57:41] [Sound Library Loader/INFO]: Sound engine started
+[21:57:45] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[21:57:45] [Server thread/INFO]: Generating keypair
+[21:57:45] [Server thread/INFO]: Preparing start region for level 0
+[21:57:46] [Server thread/INFO]: Changing view distance to 12, from 10
+[21:57:46] [Server thread/INFO]: Player885[local:E:1b69e46a] logged in with entity id 235 at (-982.2595308593264, 4.0, 795.909127978049)
+[21:57:46] [Server thread/INFO]: Player885 joined the game
+[21:58:04] [Server thread/INFO]: Saving and pausing game...
+[21:58:04] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[21:58:04] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[21:58:04] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[21:58:05] [Server thread/INFO]: Stopping server
+[21:58:05] [Server thread/INFO]: Saving players
+[21:58:05] [Server thread/INFO]: Saving worlds
+[21:58:05] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[21:58:05] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[21:58:05] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[21:58:07] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[21:58:07] [Server thread/INFO]: Generating keypair
+[21:58:07] [Server thread/INFO]: Preparing start region for level 0
+[21:58:07] [Server thread/INFO]: Changing view distance to 12, from 10
+[21:58:07] [Server thread/INFO]: Player885[local:E:45ec126c] logged in with entity id 87309 at (-979.9831848439218, 5.35945221355949, 796.4211370850239)
+[21:58:07] [Server thread/INFO]: Player885 joined the game
+[21:58:24] [Client thread/INFO]: [CHAT] Connection de block : true
+[21:58:24] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
+[21:58:24] [Client thread/INFO]: [CHAT] Connection de block : true
+[21:58:24] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
+[21:58:24] [Client thread/INFO]: [CHAT] Connection de block : true
+[21:58:24] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
+[21:58:24] [Client thread/INFO]: [CHAT] Connection de block : true
+[21:58:24] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
+[21:58:25] [Client thread/INFO]: [CHAT] Connection de block : true
+[21:58:25] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
+[21:58:26] [Client thread/INFO]: [CHAT] Connection de block : false
+[21:58:26] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@297694da
+[21:58:26] [Client thread/INFO]: [CHAT] Connection de block : false
+[21:58:26] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@297694da
+[21:58:26] [Client thread/INFO]: [CHAT] Connection de block : false
+[21:58:26] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@297694da
+[21:58:26] [Client thread/INFO]: [CHAT] Connection de block : false
+[21:58:26] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@297694da
+[21:58:26] [Client thread/INFO]: [CHAT] Connection de block : false
+[21:58:26] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@297694da
+[21:58:27] [Client thread/INFO]: [CHAT] Connection de block : false
+[21:58:27] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@297694da
+[21:58:27] [Client thread/INFO]: [CHAT] Connection de block : false
+[21:58:27] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@297694da
+[21:58:28] [Client thread/INFO]: [CHAT] Connection de block : true
+[21:58:28] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
+[21:58:28] [Client thread/INFO]: [CHAT] Connection de block : true
+[21:58:28] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
+[21:58:28] [Client thread/INFO]: [CHAT] Connection de block : true
+[21:58:28] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
+[21:58:28] [Client thread/INFO]: [CHAT] Connection de block : true
+[21:58:28] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
+[21:58:28] [Client thread/INFO]: [CHAT] Connection de block : true
+[21:58:28] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
+[21:58:29] [Client thread/INFO]: [CHAT] Connection de block : true
+[21:58:29] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
+[21:58:29] [Client thread/INFO]: [CHAT] Connection de block : true
+[21:58:29] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
+[21:58:29] [Client thread/INFO]: [CHAT] Connection de block : true
+[21:58:29] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
+[21:58:30] [Client thread/INFO]: [CHAT] Connection de block : true
+[21:58:30] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
+[21:58:30] [Client thread/INFO]: [CHAT] Connection de block : true
+[21:58:30] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
+[21:58:30] [Client thread/INFO]: [CHAT] Connection de block : true
+[21:58:30] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
+[21:58:30] [Client thread/INFO]: [CHAT] Connection de block : true
+[21:58:30] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
+[21:58:40] [Client thread/INFO]: [CHAT] Connection de block : false
+[21:58:40] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@297694da
+[21:58:42] [Server thread/INFO]: Saving and pausing game...
+[21:58:42] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[21:58:42] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[21:58:42] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[21:58:43] [Server thread/INFO]: Stopping server
+[21:58:43] [Server thread/INFO]: Saving players
+[21:58:43] [Server thread/INFO]: Saving worlds
+[21:58:43] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[21:58:43] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[21:58:43] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[21:58:44] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[21:58:44] [Server thread/INFO]: Generating keypair
+[21:58:44] [Server thread/INFO]: Preparing start region for level 0
+[21:58:45] [Server thread/INFO]: Changing view distance to 12, from 10
+[21:58:45] [Server thread/INFO]: Player885[local:E:01705182] logged in with entity id 235596 at (-980.7985864255933, 5.74858181519789, 796.4923316418045)
+[21:58:45] [Server thread/INFO]: Player885 joined the game
+[21:58:57] [Server thread/INFO]: Saving and pausing game...
+[21:58:57] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[21:58:57] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[21:58:57] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[21:58:57] [Server thread/INFO]: Stopping server
+[21:58:57] [Server thread/INFO]: Saving players
+[21:58:57] [Server thread/INFO]: Saving worlds
+[21:58:57] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[21:58:57] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[21:58:57] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[21:58:58] [Client thread/INFO]: Stopping!
