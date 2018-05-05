@@ -1,109 +1,135 @@
-[21:57:31] [main/INFO]: Setting user: Player885
-[21:57:32] [Client thread/INFO]: LWJGL Version: 2.9.1
-[21:57:39] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MultimodPlus
-[21:57:40] [Sound Library Loader/INFO]: Sound engine started
-[21:57:40] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
-[21:57:40] [Client thread/INFO]: Created: 16x16 textures/items-atlas
-[21:57:40] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MultimodPlus
-[21:57:41] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[21:57:41] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[21:57:41] [Sound Library Loader/INFO]: Sound engine started
-[21:57:45] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[21:57:45] [Server thread/INFO]: Generating keypair
-[21:57:45] [Server thread/INFO]: Preparing start region for level 0
-[21:57:46] [Server thread/INFO]: Changing view distance to 12, from 10
-[21:57:46] [Server thread/INFO]: Player885[local:E:1b69e46a] logged in with entity id 235 at (-982.2595308593264, 4.0, 795.909127978049)
-[21:57:46] [Server thread/INFO]: Player885 joined the game
-[21:58:04] [Server thread/INFO]: Saving and pausing game...
-[21:58:04] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:58:04] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:58:04] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:58:05] [Server thread/INFO]: Stopping server
-[21:58:05] [Server thread/INFO]: Saving players
-[21:58:05] [Server thread/INFO]: Saving worlds
-[21:58:05] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:58:05] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:58:05] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:58:07] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[21:58:07] [Server thread/INFO]: Generating keypair
-[21:58:07] [Server thread/INFO]: Preparing start region for level 0
-[21:58:07] [Server thread/INFO]: Changing view distance to 12, from 10
-[21:58:07] [Server thread/INFO]: Player885[local:E:45ec126c] logged in with entity id 87309 at (-979.9831848439218, 5.35945221355949, 796.4211370850239)
-[21:58:07] [Server thread/INFO]: Player885 joined the game
-[21:58:24] [Client thread/INFO]: [CHAT] Connection de block : true
-[21:58:24] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
-[21:58:24] [Client thread/INFO]: [CHAT] Connection de block : true
-[21:58:24] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
-[21:58:24] [Client thread/INFO]: [CHAT] Connection de block : true
-[21:58:24] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
-[21:58:24] [Client thread/INFO]: [CHAT] Connection de block : true
-[21:58:24] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
-[21:58:25] [Client thread/INFO]: [CHAT] Connection de block : true
-[21:58:25] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
-[21:58:26] [Client thread/INFO]: [CHAT] Connection de block : false
-[21:58:26] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@297694da
-[21:58:26] [Client thread/INFO]: [CHAT] Connection de block : false
-[21:58:26] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@297694da
-[21:58:26] [Client thread/INFO]: [CHAT] Connection de block : false
-[21:58:26] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@297694da
-[21:58:26] [Client thread/INFO]: [CHAT] Connection de block : false
-[21:58:26] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@297694da
-[21:58:26] [Client thread/INFO]: [CHAT] Connection de block : false
-[21:58:26] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@297694da
-[21:58:27] [Client thread/INFO]: [CHAT] Connection de block : false
-[21:58:27] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@297694da
-[21:58:27] [Client thread/INFO]: [CHAT] Connection de block : false
-[21:58:27] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@297694da
-[21:58:28] [Client thread/INFO]: [CHAT] Connection de block : true
-[21:58:28] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
-[21:58:28] [Client thread/INFO]: [CHAT] Connection de block : true
-[21:58:28] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
-[21:58:28] [Client thread/INFO]: [CHAT] Connection de block : true
-[21:58:28] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
-[21:58:28] [Client thread/INFO]: [CHAT] Connection de block : true
-[21:58:28] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
-[21:58:28] [Client thread/INFO]: [CHAT] Connection de block : true
-[21:58:28] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
-[21:58:29] [Client thread/INFO]: [CHAT] Connection de block : true
-[21:58:29] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
-[21:58:29] [Client thread/INFO]: [CHAT] Connection de block : true
-[21:58:29] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
-[21:58:29] [Client thread/INFO]: [CHAT] Connection de block : true
-[21:58:29] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
-[21:58:30] [Client thread/INFO]: [CHAT] Connection de block : true
-[21:58:30] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
-[21:58:30] [Client thread/INFO]: [CHAT] Connection de block : true
-[21:58:30] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
-[21:58:30] [Client thread/INFO]: [CHAT] Connection de block : true
-[21:58:30] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
-[21:58:30] [Client thread/INFO]: [CHAT] Connection de block : true
-[21:58:30] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@6edc8193
-[21:58:40] [Client thread/INFO]: [CHAT] Connection de block : false
-[21:58:40] [Client thread/INFO]: [CHAT] Tile Entity : programgames.multimodplus.tileentity.TileEntityDetector@297694da
-[21:58:42] [Server thread/INFO]: Saving and pausing game...
-[21:58:42] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:58:42] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:58:42] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:58:43] [Server thread/INFO]: Stopping server
-[21:58:43] [Server thread/INFO]: Saving players
-[21:58:43] [Server thread/INFO]: Saving worlds
-[21:58:43] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:58:43] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:58:43] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:58:44] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[21:58:44] [Server thread/INFO]: Generating keypair
-[21:58:44] [Server thread/INFO]: Preparing start region for level 0
-[21:58:45] [Server thread/INFO]: Changing view distance to 12, from 10
-[21:58:45] [Server thread/INFO]: Player885[local:E:01705182] logged in with entity id 235596 at (-980.7985864255933, 5.74858181519789, 796.4923316418045)
-[21:58:45] [Server thread/INFO]: Player885 joined the game
-[21:58:57] [Server thread/INFO]: Saving and pausing game...
-[21:58:57] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:58:57] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:58:57] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:58:57] [Server thread/INFO]: Stopping server
-[21:58:57] [Server thread/INFO]: Saving players
-[21:58:57] [Server thread/INFO]: Saving worlds
-[21:58:57] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:58:57] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:58:57] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:58:58] [Client thread/INFO]: Stopping!
+[19:17:42] [Server thread/INFO]: Starting minecraft server version 1.7.10
+[19:17:53] [Server thread/INFO]: Loading properties
+[19:17:53] [Server thread/INFO]: Default game type: SURVIVAL
+[19:17:53] [Server thread/INFO]: Generating keypair
+[19:17:53] [Server thread/INFO]: Starting Minecraft server on *:25565
+[19:17:54] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[19:17:54] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[19:17:54] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[19:17:54] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[19:17:54] [Server thread/INFO]: Preparing level "world"
+[19:17:54] [Server thread/INFO]: Preparing start region for level 0
+[19:17:55] [Server thread/INFO]: Preparing spawn area: 47%
+[19:17:56] [Server thread/INFO]: Done (1,715s)! For help, type "help" or "?"
+[19:20:16] [Server thread/INFO]: julien[/127.0.0.1:50202] logged in with entity id 204 at (-169.5, 65.0, 245.5)
+[19:20:16] [Server thread/INFO]: julien joined the game
+[19:20:19] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 2518ms behind, skipping 50 tick(s)
+[19:20:24] [Server thread/INFO]: julien has just earned the achievement [Taking Inventory]
+[19:20:35] [Server thread/INFO]: Opped julien
+[19:20:42] [Server thread/INFO]: [julien: Set own game mode to Creative Mode]
+[19:20:46] [Server thread/INFO]: julien lost connection: TranslatableComponent{key='disconnect.timeout', args=[], siblings=[], style=Style{hasParent=false, color=null, bold=null, italic=null, underlined=null, obfuscated=null, clickEvent=null, hoverEvent=null}}
+[19:20:46] [Server thread/INFO]: julien left the game
+[19:20:46] [Server thread/INFO]: julien lost connection: TranslatableComponent{key='disconnect.timeout', args=[], siblings=[], style=Style{hasParent=false, color=null, bold=null, italic=null, underlined=null, obfuscated=null, clickEvent=null, hoverEvent=null}}
+[19:20:46] [Server thread/INFO]: julien left the game
+[19:20:46] [Server thread/INFO]: julien lost connection: TranslatableComponent{key='disconnect.timeout', args=[], siblings=[], style=Style{hasParent=false, color=null, bold=null, italic=null, underlined=null, obfuscated=null, clickEvent=null, hoverEvent=null}}
+[19:20:46] [Server thread/INFO]: julien left the game
+[19:20:46] [Server thread/INFO]: julien lost connection: TranslatableComponent{key='disconnect.timeout', args=[], siblings=[], style=Style{hasParent=false, color=null, bold=null, italic=null, underlined=null, obfuscated=null, clickEvent=null, hoverEvent=null}}
+[19:20:46] [Server threa[19:20:46] [Client thread/INFO][19:21:06] [Server thread/WARN][19:21:23] [Client thread/INFO]: Connecting to localhost, 25565
+[20:41:24] [Client thread/INFO]: Stopping!
+3 tick(s)
+[19:21:08] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 2235ms behind, skipping 44 tick(s)
+[19:21:18] [Server thread/INFO]: julien lost connection: TextComponent{text='Disconnected', siblings=[], style=Style{hasParent=false, color=null, bold=null, italic=null, underlined=null, obfuscated=null, clickEvent=null, hoverEvent=null}}
+[19:21:18] [Server thread/INFO]: julien left the game
+[19:21:23] [Server thread/INFO]: julien[/127.0.0.1:50231] logged in with entity id 972 at (-155.30609859863145, 65.0, 240.31168849061504)
+[19:21:23] [Server thread/INFO]: julien joined the game
+[19:21:26] [Server thread/INFO]: julien lost connection: TextComponent{text='Disconnected', siblings=[], style=Style{hasParent=false, color=null, bold=null, italic=null, underlined=null, obfuscated=null, clickEvent=null, hoverEvent=null}}
+[19:21:26] [Server thread/INFO]: julien left the game
+[19:21:31] [Server thread/INFO]: Unknown command. Try /help for a list of commands
+[19:21:34] [Server thread/INFO]: Unknown command. Try /help for a list of commands
+[19:21:37] [Server thread/INFO]: --- Showing help page 1 of 7 (/help <page>) ---
+[19:21:37] [Server thread/INFO]: /achievement give <stat_name> [player]
+[19:21:37] [Server thread/INFO]: /ban <name> [reason ...]
+[19:21:37] [Server thread/INFO]: /ban-ip <address|name> [reason ...]
+[19:21:37] [Server thread/INFO]: /banlist [ips|players]
+[19:21:37] [Server thread/INFO]: /clear <player> [item] [data]
+[19:21:37] [Server thread/INFO]: /debug <start|stop>
+[19:21:37] [Server thread/INFO]: /defaultgamemode <mode>
+[19:21:43] [Server thread/INFO]: --- Showing help page 1 of 7 (/help <page>) ---
+[19:21:43] [Server thread/INFO]: /achievement give <stat_name> [player]
+[19:21:43] [Server thread/INFO]: /ban <name> [reason ...]
+[19:21:43] [Server thread/INFO]: /ban-ip <address|name> [reason ...]
+[19:21:43] [Server thread/INFO]: /banlist [ips|players]
+[19:21:43] [Server thread/INFO]: /clear <player> [item] [data]
+[19:21:43] [Server thread/INFO]: /debug <start|stop>
+[19:21:43] [Server thread/INFO]: /defaultgamemode <mode>
+[19:21:59] [Server thread/INFO]: --- Showing help page 1 of 7 (/help <page>) ---
+[19:21:59] [Server thread/INFO]: /achievement give <stat_name> [player]
+[19:21:59] [Server thread/INFO]: /ban <name> [reason ...]
+[19:21:59] [Server thread/INFO]: /ban-ip <address|name> [reason ...]
+[19:21:59] [Server thread/INFO]: /banlist [ips|players]
+[19:21:59] [Server thread/INFO]: /clear <player> [item] [data]
+[19:21:59] [Server thread/INFO]: /debug <start|stop>
+[19:21:59] [Server thread/INFO]: /defaultgamemode <mode>
+[19:22:03] [Server thread/INFO]: --- Showing help page 2 of 7 (/help <page>) ---
+[19:22:03] [Server thread/INFO]: /deop <player>
+[19:22:03] [Server thread/INFO]: /difficulty <new difficulty>
+[19:22:03] [Server thread/INFO]: /effect <player> <effect> [seconds] [amplifier]
+[19:22:03] [Server thread/INFO]: /enchant <player> <enchantment ID> [level]
+[19:22:03] [Server thread/INFO]: Use /forge <subcommand>. Subcommands are tps, track
+[19:22:03] [Server thread/INFO]: /gamemode <mode> [player]
+[19:22:03] [Server thread/INFO]: /gamerule <rule name> <value> OR /gamerule <rule name>
+[19:22:07] [Server thread/INFO]: You must specify which player you wish to perform this action on.
+[19:22:14] [Server thread/INFO]: --- Showing help page 3 of 7 (/help <page>) ---
+[19:22:14] [Server thread/INFO]: /give <player> <item> [amount] [data] [dataTag]
+[19:22:14] [Server thread/INFO]: /help [page|command name]
+[19:22:14] [Server thread/INFO]: /kick <player> [reason ...]
+[19:22:14] [Server thread/INFO]: /kill
+[19:22:14] [Server thread/INFO]: /list
+[19:22:14] [Server thread/INFO]: /me <action ...>
+[19:22:14] [Server thread/INFO]: /list
+[19:22:19] [Server thread/INFO]: --- Showing help page 4 of 7 (/help <page>) ---
+[19:22:19] [Server thread/INFO]: /op <player>
+[19:22:19] [Server thread/INFO]: /pardon <name>
+[19:22:19] [Server thread/INFO]: /pardon-ip <address>
+[19:22:19] [Server thread/INFO]: /playsound <sound> <player> [x] [y] [z] [volume] [pitch] [minimumVolume]
+[19:22:19] [Server thread/INFO]: /save-all
+[19:22:19] [Server thread/INFO]: /save-off
+[19:22:19] [Server thread/INFO]: /save-on
+[19:22:21] [Server thread/INFO]: --- Showing help page 5 of 7 (/help <page>) ---
+[19:22:21] [Server thread/INFO]: /say <message ...>
+[19:22:21] [Server thread/INFO]: /scoreboard <objectives|players|teams>
+[19:22:21] [Server thread/INFO]: /seed
+[19:22:21] [Server thread/INFO]: /setblock <x> <y> <z> <TileName> [dataValue] [oldBlockHandling] [dataTag]
+[19:22:21] [Server thread/INFO]: /setidletimeout <Minutes until kick>
+[19:22:21] [Server thread/INFO]: /setworldspawn OR /setworldspawn <x> <y> <z>
+[19:22:21] [Server thread/INFO]: /spawnpoint OR /spawnpoint <player> OR /spawnpoint <player> <x> <y> <z>
+[19:22:24] [Server thread/INFO]: --- Showing help page 6 of 7 (/help <page>) ---
+[19:22:24] [Server thread/INFO]: /spreadplayers <x> <z> <spreadDistance> <maxRange> <respectTeams true|false> <player ...>
+[19:22:24] [Server thread/INFO]: /stop
+[19:22:24] [Server thread/INFO]: /summon <EntityName> [x] [y] [z] [dataTag]
+[19:22:24] [Server thread/INFO]: /tell <player> <private message ...>
+[19:22:24] [Server thread/INFO]: /tellraw <player> <raw json message>
+[19:22:24] [Server thread/INFO]: /testfor <player>
+[19:22:24] [Server thread/INFO]: /testforblock <x> <y> <z> <TileName> [dataValue] [dataTag]
+[19:22:26] [Server thread/INFO]: --- Showing help page 7 of 7 (/help <page>) ---
+[19:22:26] [Server thread/INFO]: /time <set|add> <value>
+[19:22:26] [Server thread/INFO]: /toggledownfall
+[19:22:26] [Server thread/INFO]: /tp [target player] <destination player> OR /tp [target player] <x> <y> <z>
+[19:22:26] [Server thread/INFO]: /weather <clear|rain|thunder> [duration in seconds]
+[19:22:26] [Server thread/INFO]: /whitelist <on|off|list|add|remove|reload>
+[19:22:26] [Server thread/INFO]: /xp <amount> [player] OR /xp <amount>L [player]
+[19:22:48] [Server thread/INFO]: Can't stop profiling when we haven't started yet!
+[19:22:53] [Server thread/INFO]: Stopping server
+[19:22:53] [Server thread/INFO]: Saving players
+[19:22:53] [Server thread/INFO]: Saving worlds
+[19:22:53] [Server thread/INFO]: Saving chunks for level 'world'/Overworld
+[19:22:53] [Server thread/INFO]: Saving chunks for level 'world'/Nether
+[19:22:53] [Server thread/INFO]: Saving chunks for level 'world'/The End
+[19:23:05] [Server thread/INFO]: Starting minecraft server version 1.7.10
+[19:23:14] [Server thread/INFO]: Loading properties
+[19:23:14] [Server thread/INFO]: Default game type: SURVIVAL
+[19:23:14] [Server thread/INFO]: Generating keypair
+[19:23:14] [Server thread/INFO]: Starting Minecraft server on *:25565
+[19:23:15] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[19:23:15] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[19:23:15] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[19:23:15] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[19:23:15] [Server thread/INFO]: Preparing level "world"
+[19:23:15] [Server thread/INFO]: Preparing start region for level 0
+[19:23:16] [Server thread/INFO]: Done (1,152s)! For help, type "help" or "?"
+[20:12:07] [Server thread/INFO]: Stopping server
+[20:12:07] [Server thread/INFO]: Saving players
+[20:12:07] [Server thread/INFO]: Saving worlds
+[20:12:07] [Server thread/INFO]: Saving chunks for level 'world'/Overworld
+[20:12:07] [Server thread/INFO]: Saving chunks for level 'world'/Nether
+[20:12:07] [Server thread/INFO]: Saving chunks for level 'world'/The End

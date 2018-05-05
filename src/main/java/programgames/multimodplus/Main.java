@@ -1,5 +1,6 @@
 package programgames.multimodplus;
 
+
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -44,7 +45,7 @@ public class Main {
    * References des Proxy : action sur le client ou serveur.
    */
   @SidedProxy(clientSide = "programgames.multimodplus.proxy.CommonProxy",
-              serverSide = "programgames.multimodlus.proxy.ServerProxy")
+              serverSide = "programgames.multimodplus.proxy.ServerProxy")
   public static CommonProxy proxy;
 
   /**
@@ -60,11 +61,6 @@ public class Main {
   */
   @EventHandler
   public void preInit(FMLPreInitializationEvent e) {
-    /**The preInit Handler is called at the very beginning of the startup routine.
-    * In this method we should read your config file, create Blocks, Items, etc. and register
-    * them with the GameRegistry.
-    **/
-
     proxy.preInit(e);
 
   }
@@ -83,7 +79,6 @@ public class Main {
    * adjust your setup based on this.
    * @param e evenement de post-initialisation de Forge
    */
-  
   @EventHandler
   public void postInit(FMLPostInitializationEvent e) {
     proxy.postInit(e);

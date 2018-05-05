@@ -1,9 +1,9 @@
 package programgames.multimodplus.tileentity;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import programgames.multimodplus.Main;
-import programgames.multimodplus.client.TileEntityChestSpecialRenderer;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -18,13 +18,14 @@ public class TileEntityMaker {
   /**
    * Inits the maker.
    */
-  public static final void init() {
+  public static final void init(FMLPreInitializationEvent event) {
 
     GameRegistry.registerTileEntity(TileEntityCounter.class,Main.MODID + ":tile1");
 
     GameRegistry.registerTileEntity(TileEntityChest.class,Main.MODID + ":tileVoid");
-    ClientRegistry.bindTileEntitySpecialRenderer(TileEntityChest.class,
-        new TileEntityChestSpecialRenderer());
+
+
+
     
     GameRegistry.registerTileEntity(TileEntityOverPoweredEnergieCube.class,Main.MODID + ":tilecube");
     GameRegistry.registerTileEntity(TileEntityDetector.class,Main.MODID + ":tiledetector");

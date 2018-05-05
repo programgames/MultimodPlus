@@ -5,7 +5,10 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import programgames.multimodplus.Main;
 
-public class AlarmBlock extends Block {
+/**
+ * A simple alarm powered by redstone.
+ */
+class AlarmBlock extends Block {
 
     /**
      * Instancie un nouveau teleporter block.

@@ -6,6 +6,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraftforge.common.MinecraftForge;
 import programgames.multimodplus.block.BlockMaker;
+import programgames.multimodplus.block.TileEntityBindingMaker;
 import programgames.multimodplus.client.RenderInventoryMaker;
 import programgames.multimodplus.common.EventHandler;
 import programgames.multimodplus.crafting.CraftingMaker;
@@ -32,12 +33,14 @@ public class CommonProxy {
     ItemMaker.init();
     BlockMaker.init();
     GameRegistry.registerWorldGenerator(new Worldgen(), 0);
-    TileEntityMaker.init();
-    RenderInventoryMaker.init();
-    GuiMaker.init();
+    TileEntityMaker.init(event);
+
     if(event.getSide().isClient())
     {
       MinecraftForge.EVENT_BUS.register(new EventHandler());
+      RenderInventoryMaker.init();
+      GuiMaker.init();
+      TileEntityBindingMaker.init();
     }
 
   }
