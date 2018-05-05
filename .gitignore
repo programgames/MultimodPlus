@@ -41,3 +41,8 @@ hs_err_pid*
 /src/main/MultimodPlus.iml
 /out/
 !/gradle/wrapper/gradle-wrapper.jar
+/forge-1.7.10-10.13.4.1614-1.7.10-changelog.txt
+/LICENSE-fml.txt
+/MinecraftForge-Credits.txt
+/CREDITS-fml.txt
+/MinecraftForge-License.txt
