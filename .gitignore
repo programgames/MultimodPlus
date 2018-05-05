@@ -39,3 +39,4 @@ hs_err_pid*
 /config/
 /classes/
 /src/main/MultimodPlus.iml
+/out/
