@@ -11,33 +11,40 @@ import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.common.util.ForgeDirection;
 
-public class TileEntityOverPoweredEnergieCube extends TileEntity implements IEnergyStorage, IEnergyHandler {
+public class TileEntityOverPoweredEnergieCube extends TileEntity
+        implements IEnergyStorage, IEnergyHandler {
 
   private byte direction;
   private String customName;
   protected int energy;
-  protected int capacity;
-  protected int maxReceive;
-  protected int maxExtract;
+  private int capacity;
+  private int maxReceive;
+  private int maxExtract;
 
   public TileEntityOverPoweredEnergieCube(int capacity) {
 
     this(capacity, capacity, capacity);
   }
 
-  public TileEntityOverPoweredEnergieCube(int capacity, int maxTransfer) {
 
-    this(capacity, maxTransfer, maxTransfer);
-  }
-
+  /**
+   * Create a tile.
+   * @param capacity the capacity.
+   * @param maxReceive the max input.
+   * @param maxExtract the pax output.
+   */
   public TileEntityOverPoweredEnergieCube(int capacity, int maxReceive, int maxExtract) {
 
     this.capacity = capacity;
     this.maxReceive = maxReceive;
     this.maxExtract = maxExtract;
   }
-  
-  
+
+
+  /**
+   * Read in save.
+   * @param nbt the nbt.
+   */
   public void readFromNBT(NBTTagCompound nbt) {
 
     this.energy = nbt.getInteger("Energy");
@@ -48,6 +55,10 @@ public class TileEntityOverPoweredEnergieCube extends TileEntity implements IEne
     
   }
 
+  /**
+   * Write to save.
+   * @param nbt the nbt.
+   */
   public void writeToNBT(NBTTagCompound nbt) {
 
     if (energy < 0) {
@@ -57,6 +68,10 @@ public class TileEntityOverPoweredEnergieCube extends TileEntity implements IEne
     
   }
 
+  /**
+   * Set the capacity.
+   * @param capacity  capacity.
+   */
   public void setCapacity(int capacity) {
 
     this.capacity = capacity;
@@ -66,12 +81,20 @@ public class TileEntityOverPoweredEnergieCube extends TileEntity implements IEne
     }
   }
 
+  /**
+   * Set the max output.
+   * @param maxTransfer output.
+   */
   public void setMaxTransfer(int maxTransfer) {
 
     setMaxReceive(maxTransfer);
     setMaxExtract(maxTransfer);
   }
 
+  /**
+   * set the max input.
+   * @param maxReceive the input.
+   */
   public void setMaxReceive(int maxReceive) {
 
     this.maxReceive = maxReceive;
@@ -93,10 +116,11 @@ public class TileEntityOverPoweredEnergieCube extends TileEntity implements IEne
   }
 
   /**
-   * This function is included to allow for server -&gt; client sync. Do not call this externally to the containing Tile Entity, as not all IEnergyHandlers
+   * This function is included to allow for server -&gt; client sync. Do not call this externally
+   * to the containing Tile Entity, as not all IEnergyHandlers
    * are guaranteed to have it.
    *
-   * @param energy
+   * @param energy the energy.
    */
   public void setEnergyStored(int energy) {
 
@@ -110,10 +134,11 @@ public class TileEntityOverPoweredEnergieCube extends TileEntity implements IEne
   }
 
   /**
-   * This function is included to allow the containing tile to directly and efficiently modify the energy contained in the EnergyStorage. Do not rely on this
+   * This function is included to allow the containing tile to directly and efficiently modify the
+   * energy contained in the EnergyStorage. Do not rely on this
    * externally, as not all IEnergyHandlers are guaranteed to have it.
    *
-   * @param energy
+   * @param energy the energy.
    */
   public void modifyEnergyStored(int energy) {
 
@@ -138,6 +163,10 @@ public class TileEntityOverPoweredEnergieCube extends TileEntity implements IEne
     return energyReceived;
   }
 
+  public int receiveEnergy(ForgeDirection from, int maxReceive, boolean simulate) {
+    return capacity += 10;
+  }
+
   @Override
   public int extractEnergy(int maxExtract, boolean simulate) {
 
@@ -149,10 +178,40 @@ public class TileEntityOverPoweredEnergieCube extends TileEntity implements IEne
     return energyExtracted;
   }
 
+  /**
+   * Remove energy from an IEnergyProvider, internal distribution is left entirely to
+   * the IEnergyProvider.
+   *
+   * @param from
+   *            Orientation the energy is extracted from.
+   * @param maxExtract
+   *            Maximum amount of energy to extract.
+   * @param simulate
+   *            If TRUE, the extraction will only be simulated.
+   * @return Amount of energy that was (or would have been, if simulated) extracted.
+   */
+  public int extractEnergy(ForgeDirection from, int maxExtract, boolean simulate) {
+    return capacity -= 10;
+  }
+
   @Override
   public int getEnergyStored() {
 
     return energy;
+  }
+
+  /**
+   * Returns the amount of energy currently stored.
+   */
+  public int getEnergyStored(ForgeDirection from) {
+    return capacity;
+  }
+
+  /**
+   * Returns the maximum amount of energy that can be stored.
+   */
+  public int getMaxEnergyStored(ForgeDirection from) {
+    return 800;
   }
 
   @Override
@@ -160,12 +219,15 @@ public class TileEntityOverPoweredEnergieCube extends TileEntity implements IEne
 
     return capacity;
   }
+
   public void setCustomName(String customName) {
     this.customName = customName;
   }
+
   public byte getDirection() {
     return direction;
   }
+
 
   /**
    * Sets the direction.
@@ -177,6 +239,10 @@ public class TileEntityOverPoweredEnergieCube extends TileEntity implements IEne
     this.worldObj.markBlockForUpdate(this.xCoord, this.yCoord, this.zCoord);
   }
 
+  /**
+   * get the packet.
+   * @return Packet
+   */
   public Packet getDescriptionPacket() {
     NBTTagCompound nbttagcompound = new NBTTagCompound();
     this.writeToNBT(nbttagcompound);
@@ -199,51 +265,11 @@ public class TileEntityOverPoweredEnergieCube extends TileEntity implements IEne
     this.worldObj.markBlockRangeForRenderUpdate(this.xCoord,
         this.yCoord, this.zCoord, this.xCoord, this.yCoord, this.zCoord);
   }
-  
-  
-  public int receiveEnergy(ForgeDirection from, int maxReceive, boolean simulate)
-  {
-    return capacity +=10;
-  }
 
-  /**
-   * Remove energy from an IEnergyProvider, internal distribution is left entirely to the IEnergyProvider.
-   *
-   * @param from
-   *            Orientation the energy is extracted from.
-   * @param maxExtract
-   *            Maximum amount of energy to extract.
-   * @param simulate
-   *            If TRUE, the extraction will only be simulated.
-   * @return Amount of energy that was (or would have been, if simulated) extracted.
-   */
-  
-  public int extractEnergy(ForgeDirection from, int maxExtract, boolean simulate)
-  {
-    return capacity-=10;
-  }
-
-  /**
-   * Returns the amount of energy currently stored.
-   */
-  
-  public int getEnergyStored(ForgeDirection from)
-  {
-    return capacity;
-  }
-
-  /**
-   * Returns the maximum amount of energy that can be stored.
-   */
-  
-  public int getMaxEnergyStored(ForgeDirection from)
-  {
-    return 800;
-  }
 
   @Override
   public boolean canConnectEnergy(ForgeDirection from) {
-    // TODO Stub de la méthode généré automatiquement
+    // TODO Stub de la mï¿½thode gï¿½nï¿½rï¿½ automatiquement
     return true;
   }
   

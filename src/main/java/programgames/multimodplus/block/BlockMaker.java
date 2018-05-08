@@ -28,28 +28,39 @@ public class BlockMaker {
    * Function called in the proxy.
    */
   public static final void init() {
-    GameRegistry.registerBlock(multitexture = new ChestBlock("multitexture", Material.cloth),
-        "multitexture");
-    
-    GameRegistry.registerBlock(firstore = new FirstOre("firstOre", Material.rock,
-        ItemMaker.chocolate, 2, 0, 1),
-        "firstOre");
-    
-    GameRegistry.registerBlock(stair = new CustomStair(firstore, 0, "OreStair"),
-        "OreStair");
-    
-    GameRegistry.registerBlock(simpleBlock = new TeleporterBlock("simpleBlock", Material.sand),
-        "simpleBlock");
-    
-    GameRegistry.registerBlock(block16 = new CounterBlock("block16", Material.rock),
-        "block16");
-    GameRegistry.registerBlock(cube = new OverPoweredEnergieCube("OPCUBE", Material.rock),"cube");
+    GameRegistry.registerBlock(
+            multitexture = new ChestBlock("multitexture", Material.cloth),
+            "multitexture");
 
-    GameRegistry.registerBlock(cube = new UltimateEnergyTransporter("Energy Transporter", Material.rock),"Energy Transporter");
+    GameRegistry.registerBlock(firstore = new FirstOre("firstOre", Material.rock,
+                    ItemMaker.chocolate, 2, 0, 1),
+            "firstOre");
+
+    GameRegistry.registerBlock(
+            stair = new CustomStair(firstore, 0, "OreStair"),
+            "OreStair");
+
+    GameRegistry.registerBlock(
+            simpleBlock = new TeleporterBlock("simpleBlock", Material.sand),
+            "simpleBlock");
+
+    GameRegistry.registerBlock(
+            block16 = new CounterBlock("block16", Material.rock),
+            "block16");
+
+    GameRegistry.registerBlock(
+            cube = new OverPoweredEnergieCube("OPCUBE", Material.rock),
+            "cube");
+
+    GameRegistry.registerBlock(
+            cube = new UltimateEnergyTransporter("Energy Transporter", Material.rock),
+            "Energy Transporter");
 
     GameRegistry.registerBlock(alarm = new AlarmBlock("Alarm", Material.rock),"Alarm");
 
-    GameRegistry.registerBlock(detector = new BlockDetector("blockdetector", Material.cloth), "Bloc detector");
+    GameRegistry.registerBlock(detector = new BlockDetector(
+                    "blockdetector", Material.cloth),
+            "Bloc detector");
 
   }
 }

@@ -13,7 +13,12 @@ import programgames.multimodplus.tileentity.TileEntityTransporter;
 
 public class UltimateEnergyTransporter extends Block {
 
-  
+
+  /**
+   * Create a block.
+   * @param  unlocalizedName name.
+   * @param material the material.
+   */
   public UltimateEnergyTransporter(String unlocalizedName, Material material) {
     
     super(material);
@@ -34,6 +39,11 @@ public class UltimateEnergyTransporter extends Block {
   public TileEntity createTileEntity(World world, int metadata) {
     return new TileEntityTransporter(800);
   }
+
+
+  /**
+   * Called when the block is placed in the world.
+   */
   public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase living,
       ItemStack stack) {
     
@@ -72,7 +82,17 @@ public class UltimateEnergyTransporter extends Block {
     }
     return false;
   }
-  
+
+  /**
+   * Get the rotations that can apply to the block at the specified coordinates.
+   * Null means no rotations are possible.
+   * Note, this is up to the block to decide. It may not be accurate or representative.
+   * @param world The world
+   * @param x X position
+   * @param y Y position
+   * @param z Z position
+   * @return An array of valid axes to rotate around, or null for none or unknown
+   */
   public ForgeDirection[] getValidRotations(World world, int x, int y, int z) {
     return world.getBlockMetadata(x, y, z) == 0
         ? new ForgeDirection[] { ForgeDirection.UP, ForgeDirection.DOWN }

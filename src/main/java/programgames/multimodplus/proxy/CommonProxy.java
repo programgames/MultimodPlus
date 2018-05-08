@@ -16,16 +16,16 @@ import programgames.multimodplus.tileentity.TileEntityMaker;
 import programgames.multimodplus.world.Worldgen;
 
 /**
- * Cette classe est le proxy client, qui gere les actiosn cote client.
+ * Client proxy.
  * @version 2.0
  * @author programgames
  */
 public class CommonProxy {
-  
+
 
   /**
-   * Fonction de pre init du proxy.
-   * 
+   * Pre-init initialisation.
+   *
    * @param event de forge de pre initialisation
    */
   public void preInit(FMLPreInitializationEvent event) {
@@ -35,8 +35,7 @@ public class CommonProxy {
     GameRegistry.registerWorldGenerator(new Worldgen(), 0);
     TileEntityMaker.init(event);
 
-    if(event.getSide().isClient())
-    {
+    if (event.getSide().isClient()) {
       MinecraftForge.EVENT_BUS.register(new EventHandler());
       RenderInventoryMaker.init();
       GuiMaker.init();
@@ -46,8 +45,8 @@ public class CommonProxy {
   }
 
   /**
-   * Fonction d'initialisation du proxy.
-   * @param e event d'initialisation de forge.
+   * Init proxy.
+   * @param e init event.
    */
   public void init(FMLInitializationEvent e) {
 
@@ -55,10 +54,10 @@ public class CommonProxy {
 
   }
   /**
-   * Fonction de post initialisation du proxy.
+   * post init proxy.
    * @param e de post initialisation de forge
    */
-  
+
   public void postInit(FMLPostInitializationEvent e) {
 
   }

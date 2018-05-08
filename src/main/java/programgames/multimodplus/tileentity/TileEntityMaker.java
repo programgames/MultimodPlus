@@ -12,27 +12,19 @@ import programgames.multimodplus.Main;
 public class TileEntityMaker {
 
 
- 
-  public TileEntityCounter tileEntityTutoriel1;
-
   /**
    * Inits the maker.
    */
-  public static final void init(FMLPreInitializationEvent event) {
+  public static void init(FMLPreInitializationEvent event) {
 
-    GameRegistry.registerTileEntity(TileEntityCounter.class,Main.MODID + ":tile1");
-
-    GameRegistry.registerTileEntity(TileEntityChest.class,Main.MODID + ":tileVoid");
-
-
-
-    
-    GameRegistry.registerTileEntity(TileEntityOverPoweredEnergieCube.class,Main.MODID + ":tilecube");
-    GameRegistry.registerTileEntity(TileEntityDetector.class,Main.MODID + ":tiledetector");
-
-
-
+    GameRegistry.registerTileEntity(
+            TileEntityCounter.class,Main.MODID + ":tile1");
+    GameRegistry.registerTileEntity(
+            TileEntityChest.class,Main.MODID + ":tileVoid");
+    GameRegistry.registerTileEntity(
+            TileEntityOverPoweredEnergieCube.class,Main.MODID + ":tilecube");
+    GameRegistry.registerTileEntity(
+            TileEntityDetector.class,Main.MODID + ":tiledetector");
 
   }
-
 }
