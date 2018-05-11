@@ -24,7 +24,8 @@ public class BlockDetector  extends BlockContainer {
   private IIcon top;
   private IIcon sides;
   private IIcon front;
-
+  private IIcon back;
+  private IIcon back_powered;
 
   /**
    * Constructor of the Block.
@@ -38,8 +39,9 @@ public class BlockDetector  extends BlockContainer {
     this.setCreativeTab(CreativeTabs.tabBlock);
     this.setHardness(2.0F);
     this.setResistance(6.0F);
-    setHarvestLevel("pickaxe", 3);
-    this.setStepSound(soundTypeGravel);
+    setHarvestLevel("pickaxe", 2);
+    this.setStepSound(soundTypeStone);
+
   }
 
   /**
@@ -64,9 +66,12 @@ public class BlockDetector  extends BlockContainer {
 
   @Override
   public void registerBlockIcons(IIconRegister iconRegister) {
-    this.top = iconRegister.registerIcon("multimodplus:collector_top");
-    this.sides = iconRegister.registerIcon("multimodplus:collector_side");
-    this.front = iconRegister.registerIcon("multimodplus:detector4_front");
+    this.top = iconRegister.registerIcon("multimodplus:detector_top");
+    this.sides = iconRegister.registerIcon("multimodplus:detector_side");
+    this.front = iconRegister.registerIcon("multimodplus:detector_front");
+    this.back =  iconRegister.registerIcon("multimodplus:detector_back");
+    this.back_powered =  iconRegister.registerIcon("multimodplus:detector_back_powered");
+
   }
 
   /**
@@ -88,19 +93,20 @@ public class BlockDetector  extends BlockContainer {
    */
   @Override
   public IIcon getIcon(IBlockAccess world, int x, int y, int z, int side) {
-    if (side == 1) {
-      return top;
-    }
+
     int facing = 2;
+
     TileEntityDetector machine = (TileEntityDetector) world.getTileEntity(x, y, z);
     if (machine != null) {
       facing = machine.getFacing();
     }
-    if (side == facing) {
-      return front;
-    } else {
-      return sides;
+    if(side == 0 || side == 4 || side == 5)
+    {
+      return this.sides;
     }
+
+    return null;
+
   }
 
   /**
@@ -111,13 +117,14 @@ public class BlockDetector  extends BlockContainer {
    */
   @Override
   public IIcon getIcon(int side, int metadata) {
-    if (side == 1) {
-      return top;
-    }
-    if (side == 3) {
-      return front;
-    }
-    return sides;
+//    if (side == 1) {
+//      return top;
+//    }
+//    if (side == 3) {
+//      return front;
+//    }
+//
+    return null;
   }
 
   /**
@@ -140,10 +147,8 @@ public class BlockDetector  extends BlockContainer {
     if (world.isRemote) {
       return true;
     } else {
-      player.addChatMessage(new ChatComponentText("Connection de block : "
-              + ((TileEntityDetector)world.getTileEntity(x,y,z)).isConnected));
-      player.addChatMessage(new ChatComponentText("Tile Entity : "
-              + ((TileEntityDetector)world.getTileEntity(x,y,z)).toString()));
+      player.addChatMessage(new ChatComponentText("face : "
+              + ((TileEntityDetector)world.getTileEntity(x,y,z)).getFacing()));
 
       return true;
     }
