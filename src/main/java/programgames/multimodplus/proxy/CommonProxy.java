@@ -1,5 +1,6 @@
 package programgames.multimodplus.proxy;
 
+import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -8,6 +9,7 @@ import net.minecraftforge.common.MinecraftForge;
 import programgames.multimodplus.block.BlockMaker;
 import programgames.multimodplus.block.TileEntityBindingMaker;
 import programgames.multimodplus.client.RenderInventoryMaker;
+import programgames.multimodplus.client.RenderDetector;
 import programgames.multimodplus.common.EventHandler;
 import programgames.multimodplus.crafting.CraftingMaker;
 import programgames.multimodplus.gui.GuiMaker;
@@ -22,6 +24,8 @@ import programgames.multimodplus.world.Worldgen;
  */
 public class CommonProxy {
 
+  public static int renderDetectorId;
+
 
   /**
    * Pre-init initialisation.
@@ -30,10 +34,15 @@ public class CommonProxy {
    */
   public void preInit(FMLPreInitializationEvent event) {
 
+
     ItemMaker.init();
     BlockMaker.init();
     GameRegistry.registerWorldGenerator(new Worldgen(), 0);
     TileEntityMaker.init(event);
+
+    renderDetectorId = RenderingRegistry.getNextAvailableRenderId();
+    RenderingRegistry.registerBlockHandler(renderDetectorId, new RenderDetector());
+
 
     if (event.getSide().isClient()) {
       MinecraftForge.EVENT_BUS.register(new EventHandler());

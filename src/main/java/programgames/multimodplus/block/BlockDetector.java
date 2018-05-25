@@ -1,5 +1,7 @@
 package programgames.multimodplus.block;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockAir;
 import net.minecraft.block.BlockContainer;
@@ -10,11 +12,13 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import programgames.multimodplus.proxy.CommonProxy;
 import programgames.multimodplus.tileentity.TileEntityDetector;
 
 
@@ -110,22 +114,16 @@ public class BlockDetector  extends BlockContainer {
   }
 
   /**
-   * Gets the block's texture. Args: side, meta
+   * Gets the block's texture. Args: side,
    * @param side Side of the block
    * @param metadata metadata of the block
    * @return IIcon icon of the block
    */
   @Override
   public IIcon getIcon(int side, int metadata) {
-//    if (side == 1) {
-//      return top;
-//    }
-//    if (side == 3) {
-//      return front;
-//    }
-//
-    return null;
-  }
+
+   return top;
+   }
 
   /**
    * Called upon block activation (right click on the block.)
@@ -182,6 +180,8 @@ public class BlockDetector  extends BlockContainer {
     if (tile instanceof TileEntityDetector) {
       TileEntityDetector machine = (TileEntityDetector)tile;
       int l = MathHelper.floor_double((double) (player.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
+      int direction = MathHelper.floor_double((double)(player.rotationYaw * 4.0F / 360.0F) + 2.5D) & 3;
+      world.setBlockMetadataWithNotify(x, y, z, direction, 2);
 
       if (l == 0) {
         machine.setFacing(2);
@@ -273,5 +273,39 @@ public class BlockDetector  extends BlockContainer {
   @Override
   public boolean hasTileEntity(int metadata) {
     return true;
+  }
+
+//  public boolean renderAsNormalBlock()
+//  {
+//    return false;
+//  }
+
+@Override
+public boolean isOpaqueCube() {
+  return false;
+}
+
+  @SideOnly(Side.CLIENT)
+  public int getRenderType()
+  {
+    return CommonProxy.renderDetectorId;
+  }
+  @SideOnly(Side.CLIENT)
+  public boolean shouldSideBeRendered(IBlockAccess blockAccess, int x, int y, int z, int side)
+  {
+    return true;
+  }
+
+  public void setBlockBounds(double minX, double minY, double minZ, double maxX, double maxY, double maxZ) {
+    this.minX = minX;
+    this.minY = minY;
+    this.minZ = minZ;
+    this.maxX = maxX;
+    this.maxY = maxY;
+    this.maxZ = maxZ;
+  }
+
+  public void setBlockBounds(AxisAlignedBB bb) {
+    this.setBlockBounds(bb.minX, bb.minY, bb.minZ, bb.maxX, bb.maxY, bb.maxZ);
   }
 }

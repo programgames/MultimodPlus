@@ -4,9 +4,13 @@ import java.util.List;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.IIcon;
+import net.minecraft.world.World;
+import net.minecraftforge.common.util.ForgeDirection;
 import programgames.multimodplus.Main;
 
 
@@ -48,6 +52,20 @@ public class MetaItem extends Item {
     for (int i = 0; i < 6; i++) {
       list.add(new ItemStack(item, 1, i));
     }
+  }
+
+  public boolean onItemUse(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int side, float hitX, float hitY, float hitZ)
+  {
+    if(!world.isRemote)
+    {
+      player.addChatMessage(new ChatComponentText("serveur : side " + side));
+      player.addChatMessage(new ChatComponentText("serveur : metadata " + world.getBlockMetadata(x, y, z)));
+    }
+    if(world.getBlock(x, y, z).rotateBlock(world, x, y, z, ForgeDirection.getOrientation(side)))
+    {
+      return true;
+    }
+    return false;
   }
 
   @Override
