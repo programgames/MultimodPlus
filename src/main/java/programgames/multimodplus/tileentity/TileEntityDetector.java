@@ -1,5 +1,6 @@
 package programgames.multimodplus.tileentity;
 
+import ic2.api.tile.IWrenchable;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockAir;
 import net.minecraft.entity.player.EntityPlayer;
@@ -9,12 +10,14 @@ import net.minecraft.network.NetworkManager;
 import net.minecraft.network.Packet;
 import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraftforge.common.util.ForgeDirection;
 import org.lwjgl.Sys;
 import programgames.multimodplus.block.BlockDetector;
+import programgames.multimodplus.block.BlockMaker;
 
-public class TileEntityDetector extends TileEntity {
+public class TileEntityDetector extends TileEntity implements IWrenchable {
 
-  private int facing = 2;
+  private short facing = 2;
   public boolean isConnected = false;
 
   @Override
@@ -22,13 +25,6 @@ public class TileEntityDetector extends TileEntity {
     notifyConnection();
   }
 
-  public int getFacing() {
-    return facing;
-  }
-
-  public void setFacing(int dir) {
-    facing = dir;
-  }
 
   @Override
   public void readFromNBT(NBTTagCompound tag) {
@@ -70,20 +66,109 @@ public class TileEntityDetector extends TileEntity {
   }
 
   private void notifyConnection() {
-    if ((getWorldObj().getBlock(this.xCoord,this.yCoord + 1,this.zCoord) != null
-            && !(getWorldObj().getBlock(xCoord, yCoord + 1, zCoord) instanceof BlockAir))) {
-      isConnected = true;
-      getWorldObj().notifyBlockOfNeighborChange(xCoord, yCoord - 1, zCoord,getBlockType());
-    } else {
-      isConnected = false;
-      getWorldObj().notifyBlockOfNeighborChange(xCoord, yCoord - 1, zCoord,getBlockType());
+
+    switch (facing)
+    {
+      case 2:
+        if ((getWorldObj().getBlock(this.xCoord,this.yCoord,this.zCoord + 1) != null
+                && !(getWorldObj().getBlock(xCoord, yCoord, zCoord + 1) instanceof BlockAir))) {
+          isConnected = true;
+          getWorldObj().notifyBlockOfNeighborChange(xCoord, yCoord, zCoord - 1 ,getBlockType());
+        } else {
+          isConnected = false;
+          getWorldObj().notifyBlockOfNeighborChange(xCoord, yCoord, zCoord - 1,getBlockType());
+        }
+        break;
+      case 3:
+        if ((getWorldObj().getBlock(this.xCoord,this.yCoord,this.zCoord - 1) != null
+                && !(getWorldObj().getBlock(xCoord, yCoord, zCoord - 1) instanceof BlockAir))) {
+          isConnected = true;
+          getWorldObj().notifyBlockOfNeighborChange(xCoord, yCoord, zCoord + 1 ,getBlockType());
+        } else {
+          isConnected = false;
+          getWorldObj().notifyBlockOfNeighborChange(xCoord, yCoord, zCoord + 1,getBlockType());
+        }
+        break;
+      case 4:
+        if ((getWorldObj().getBlock(this.xCoord +1,this.yCoord,this.zCoord) != null
+                && !(getWorldObj().getBlock(xCoord + 1, yCoord, zCoord ) instanceof BlockAir))) {
+          isConnected = true;
+          getWorldObj().notifyBlockOfNeighborChange(xCoord -1, yCoord, zCoord ,getBlockType());
+        } else {
+          isConnected = false;
+          getWorldObj().notifyBlockOfNeighborChange(xCoord - 1, yCoord, zCoord,getBlockType());
+        }
+        break;
+      case 5:
+        if ((getWorldObj().getBlock(this.xCoord - 1,this.yCoord,this.zCoord) != null
+                && !(getWorldObj().getBlock(xCoord - 1, yCoord, zCoord ) instanceof BlockAir))) {
+          isConnected = true;
+          getWorldObj().notifyBlockOfNeighborChange(xCoord + 1, yCoord, zCoord ,getBlockType());
+        } else {
+          isConnected = false;
+          getWorldObj().notifyBlockOfNeighborChange(xCoord +1, yCoord, zCoord,getBlockType());
+        }
+        break;
 
     }
+
+
   }
+
+  @Override
+  public boolean wrenchCanSetFacing(EntityPlayer entityPlayer, int side)
+  {
+    return (side != 0 && side != 1);
+  }
+
+  @Override
+  public short getFacing() {
+    return this.facing;
+  }
+
+
+  @Override
+  public void setFacing(short direction)
+  {
+    if(canSetFacing(direction))
+    {
+      facing = direction;
+    }
+    ((BlockDetector)getWorldObj().getBlock(xCoord,yCoord,zCoord)).rotateBlock(getWorldObj(),xCoord,yCoord,zCoord,ForgeDirection.EAST);
+//    getWorldObj().setBlockMetadataWithNotify()
+  }
+
+  /**
+   * Whether or not this block's orientation can be changed to a specific direction. True by default.
+   * @param facing - facing to check
+   * @return if the block's orientation can be changed
+   */
+  public boolean canSetFacing(int facing)
+  {
+    return true;
+  }
+
+  @Override
+  public boolean wrenchCanRemove(EntityPlayer entityPlayer)
+  {
+    return true;
+  }
+
+  @Override
+  public float getWrenchDropRate()
+  {
+    return 1.0F;
+  }
+
+  @Override
+  public ItemStack getWrenchDrop(EntityPlayer entityPlayer)
+  {
+    return new ItemStack(this.worldObj.getBlock(this.xCoord, this.yCoord, this.zCoord), 1, this.worldObj.getBlockMetadata(this.xCoord, this.yCoord, this.zCoord));  }
 
   @Override
   public void onChunkUnload() {
     super.onChunkUnload();
     this.invalidate();
   }
+
 }

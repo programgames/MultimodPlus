@@ -7,10 +7,12 @@ import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.client.renderer.Tessellator;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import programgames.multimodplus.block.BlockMaker;
 import programgames.multimodplus.proxy.CommonProxy;
+import programgames.multimodplus.tileentity.TileEntityDetector;
 
 public class RenderDetector implements ISimpleBlockRenderingHandler {
     @Override
@@ -22,49 +24,42 @@ public class RenderDetector implements ISimpleBlockRenderingHandler {
 
     @Override
     public boolean renderWorldBlock(IBlockAccess world, int x, int y, int z, Block block, int modelId, RenderBlocks renderer) {
+        TileEntity tile = world.getTileEntity(x,y,z);
+        int rotation = 0;
+        if(tile instanceof TileEntityDetector)
+        {
+            int facing = ((TileEntityDetector)tile).getFacing();
+            switch (facing)
+            {
+                case 2:
+                    rotation = 0;
+                    break;
+                case 3 :
+                    rotation = 180;
+                    break;
+                case 4:
+                    rotation = 90;
+                    break;
+                case 5:
+                    rotation = 270;
+                    break;
+            }
+
+        }
         Tessellator tes = Tessellator.instance;
         renderer.setRenderBounds(0F, 0F, 0F, 1F, 1F, 1F);
-
         renderer.renderStandardBlock(block, x, y, z);
+
         IIcon baseIcon = BlockMaker.detector.getIcon(0,0);
 
         tes.addTranslation(x, y, z);
 
-        VertexTransform rot = new VertexRotation(Math.toRadians(45), new Vector3d(0,1,0), new Vector3d(0.5,0.5,0.5));
-        VertexTransform trans = new VertexTranslation(0, -0.5 + 0.025, 0);
-
+        VertexTransform rot = new VertexRotation(Math.toRadians(rotation), new Vector3d(0,1,0), new Vector3d(0.5,0.5,0.5));
+        VertexTransform trans = new VertexTranslation(0, 0.5 - 0.025, 0);
         VertexTransformComposite xform = new VertexTransformComposite(rot, trans);
-        CubeRenderer.render(BoundingBox.UNIT_CUBE.scale(0.7, 0.05, 0.7), baseIcon, xform, true);
-
-        trans = new VertexTranslation(0, 0.5 - 0.025, 0);
-        xform = new VertexTransformComposite(rot, trans);
-        CubeRenderer.render(BoundingBox.UNIT_CUBE.scale(0.7, 0.05, 0.7), baseIcon, xform, true);
-
-        CubeRenderer.render(BoundingBox.UNIT_CUBE.scale(0.2, 0.91, 0.2), BlockMaker.detector.getIcon(0,0), true);
-
-        trans = new VertexTranslation(0, 0, 0.5 - 0.01);
-        xform = new VertexTransformComposite(trans);
-        CubeRenderer.render(BoundingBox.UNIT_CUBE.scale(0.25, 0.25, 0.01), baseIcon, xform, true);
-        CubeRenderer.render(BoundingBox.UNIT_CUBE.scale(0.01, 1, 0.01), baseIcon, xform, true);
-
-        rot = new VertexRotation(Math.toRadians(90), new Vector3d(0,1,0), new Vector3d(0.5,0.5,0.5));
-        xform = new VertexTransformComposite(trans, rot);
-        CubeRenderer.render(BoundingBox.UNIT_CUBE.scale(0.25, 0.25, 0.01), baseIcon, xform, true);
-        CubeRenderer.render(BoundingBox.UNIT_CUBE.scale(0.01, 1, 0.01), baseIcon, xform, true);
-
-        rot = new VertexRotation(Math.toRadians(180), new Vector3d(0,1,0), new Vector3d(0.5,0.5,0.5));
-        xform = new VertexTransformComposite(trans, rot);
-        CubeRenderer.render(BoundingBox.UNIT_CUBE.scale(0.25, 0.25, 0.01), baseIcon, xform, true);
-        CubeRenderer.render(BoundingBox.UNIT_CUBE.scale(0.01, 1, 0.01), baseIcon, xform, true);
-
-        rot = new VertexRotation(Math.toRadians(270), new Vector3d(0,1,0), new Vector3d(0.5,0.5,0.5));
-        xform = new VertexTransformComposite(trans, rot);
-        CubeRenderer.render(BoundingBox.UNIT_CUBE.scale(0.25, 0.25, 0.01), baseIcon, xform, true);
-        CubeRenderer.render(BoundingBox.UNIT_CUBE.scale(0.01, 1, 0.01), baseIcon, xform, true);
-
+        CubeRenderer.render(BoundingBox.UNIT_CUBE.scale(0.999, 0.06, 0.999), baseIcon, xform, true);
 
         tes.addTranslation(-x, -y, -z);
-
         return false;
     }
 

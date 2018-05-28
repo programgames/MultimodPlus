@@ -3,7 +3,6 @@ package programgames.multimodplus.block;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockAir;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -18,6 +17,7 @@ import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.common.util.ForgeDirection;
 import programgames.multimodplus.proxy.CommonProxy;
 import programgames.multimodplus.tileentity.TileEntityDetector;
 
@@ -60,6 +60,46 @@ public class BlockDetector  extends BlockContainer {
   @Override
   public int isProvidingWeakPower(IBlockAccess blockAccess, int x, int y, int z, int side) {
 
+      TileEntity tile = blockAccess.getTileEntity(x,y,z);
+      int facing;
+      if(tile instanceof TileEntityDetector)
+      {
+        if(((TileEntityDetector)tile).isConnected)
+        {
+          facing = ((TileEntityDetector)tile).getFacing();
+          switch (facing)
+          {
+            case 2:
+              if(side == 3 )
+              {
+                return 15;
+              }
+              break;
+            case 3:
+              if(side == 2 )
+              {
+                return 15;
+              }
+              break;
+            case 4:
+              if(side == 5 )
+              {
+                return 15;
+              }
+              break;
+            case 5:
+              if(side == 4 )
+              {
+                return 15;
+              }
+              break;
+          }
+        }
+      }
+      else
+      {
+        return 0;
+      }
     if (side == 1 && ((TileEntityDetector)blockAccess.getTileEntity(x,y,z)).isConnected) {
       return 15;
     } else {
@@ -104,10 +144,80 @@ public class BlockDetector  extends BlockContainer {
     if (machine != null) {
       facing = machine.getFacing();
     }
-    if(side == 0 || side == 4 || side == 5)
+    switch (facing)
     {
-      return this.sides;
+      case 2:
+        switch (side)
+        {
+          case 0://back
+            return sides;
+            case 1://top
+              return null;
+          case 2://front when u set
+            return back;
+          case 3://derriere
+            return front;
+          case 4://gauche
+            return sides;
+            case 5:
+          return sides;
+        }
+        break;
+      case 3:
+        switch (side)
+        {
+          case 0://back
+            return sides;
+          case 1://top
+            return null;
+          case 2://front when u set
+            return front;
+          case 3://derriere
+            return back;
+          case 4://gauche
+            return sides;
+          case 5:
+            return sides;
+        }
+        break;
+      case 4:
+        switch (side)
+        {
+          case 0://back
+            return sides;
+          case 1://top
+            return null;
+          case 2://front when u set
+            return sides;
+          case 3://derriere
+            return sides;
+          case 4://gauche
+            return back;
+          case 5:
+            return front;
+        }
+        break;
+      case 5:
+        switch (side)
+        {
+          case 0://back
+            return sides;
+          case 1://top
+            return null;
+          case 2://front when u set
+            return sides;
+          case 3://derriere
+            return sides;
+          case 4://gauche
+            return front;
+          case 5:
+            return back;
+        }
+        break;
     }
+
+
+
 
     return null;
 
@@ -147,6 +257,8 @@ public class BlockDetector  extends BlockContainer {
     } else {
       player.addChatMessage(new ChatComponentText("face : "
               + ((TileEntityDetector)world.getTileEntity(x,y,z)).getFacing()));
+      player.addChatMessage(new ChatComponentText("connected : "
+              + ((TileEntityDetector)world.getTileEntity(x,y,z)).isConnected));
 
       return true;
     }
@@ -184,19 +296,19 @@ public class BlockDetector  extends BlockContainer {
       world.setBlockMetadataWithNotify(x, y, z, direction, 2);
 
       if (l == 0) {
-        machine.setFacing(2);
+        machine.setFacing((short)2);
       }
 
       if (l == 1) {
-        machine.setFacing(5);
+        machine.setFacing((short)5);
       }
 
       if (l == 2) {
-        machine.setFacing(3);
+        machine.setFacing((short)3);
       }
 
       if (l == 3) {
-        machine.setFacing(4);
+        machine.setFacing((short)4);
       }
     }
   }
@@ -275,10 +387,6 @@ public class BlockDetector  extends BlockContainer {
     return true;
   }
 
-//  public boolean renderAsNormalBlock()
-//  {
-//    return false;
-//  }
 
 @Override
 public boolean isOpaqueCube() {
@@ -307,5 +415,24 @@ public boolean isOpaqueCube() {
 
   public void setBlockBounds(AxisAlignedBB bb) {
     this.setBlockBounds(bb.minX, bb.minY, bb.minZ, bb.maxX, bb.maxY, bb.maxZ);
+  }
+  public boolean rotateBlock(World world, int x, int y, int z, ForgeDirection axis)
+  {
+    if((axis == ForgeDirection.UP || axis == ForgeDirection.DOWN) && !world.isRemote)
+    {
+      int direction = world.getBlockMetadata(x, y, z) + 1;
+      if(direction > 3)
+      {
+        direction = 0;
+      }
+      world.setBlockMetadataWithNotify(x, y, z, direction, 3);
+      return true;
+    }
+    return false;
+  }
+
+  public ForgeDirection[] getValidRotations(World world, int x, int y, int z)
+  {
+    return new ForgeDirection[] {ForgeDirection.UP, ForgeDirection.DOWN};
   }
 }
