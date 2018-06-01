@@ -1,8 +1,10 @@
 package programgames.multimodplus.tileentity;
 
+import cofh.api.block.IDismantleable;
 import ic2.api.tile.IWrenchable;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockAir;
+import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -14,7 +16,7 @@ import net.minecraftforge.common.util.ForgeDirection;
 import org.lwjgl.Sys;
 import programgames.multimodplus.block.BlockDetector;
 import programgames.multimodplus.block.BlockMaker;
-
+import buildcraft.api.tools.IToolWrench;
 public class TileEntityDetector extends TileEntity implements IWrenchable {
 
   private short facing = 2;
@@ -45,7 +47,7 @@ public class TileEntityDetector extends TileEntity implements IWrenchable {
   public Packet getDescriptionPacket() {
     NBTTagCompound nbttagcompound = new NBTTagCompound();
     this.writeToNBT(nbttagcompound);
-    return new S35PacketUpdateTileEntity(this.xCoord, this.yCoord, this.zCoord, 0, nbttagcompound);
+    return new S35PacketUpdateTileEntity(this.xCoord, this.yCoord, this.zCoord, 1, nbttagcompound);
 
   }
 
@@ -63,6 +65,8 @@ public class TileEntityDetector extends TileEntity implements IWrenchable {
   @Override
   public void onDataPacket(NetworkManager net, S35PacketUpdateTileEntity pkt) {
     this.readFromNBT(pkt.func_148857_g());
+            worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
+
   }
 
   private void notifyConnection() {
@@ -134,8 +138,9 @@ public class TileEntityDetector extends TileEntity implements IWrenchable {
     {
       facing = direction;
     }
-    ((BlockDetector)getWorldObj().getBlock(xCoord,yCoord,zCoord)).rotateBlock(getWorldObj(),xCoord,yCoord,zCoord,ForgeDirection.EAST);
-//    getWorldObj().setBlockMetadataWithNotify()
+    getWorldObj().markBlockForUpdate(xCoord,yCoord,zCoord);
+    getWorldObj().notifyBlocksOfNeighborChange(xCoord, yCoord, zCoord, worldObj.getBlock(xCoord, yCoord, zCoord));
+            this.markDirty();
   }
 
   /**
@@ -145,7 +150,7 @@ public class TileEntityDetector extends TileEntity implements IWrenchable {
    */
   public boolean canSetFacing(int facing)
   {
-    return true;
+    return (facing != 0 && facing != 1);
   }
 
   @Override

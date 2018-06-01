@@ -1,5 +1,7 @@
 package programgames.multimodplus.block;
 
+import cofh.api.block.IDismantleable;
+import com.google.common.collect.Lists;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -21,9 +23,10 @@ import net.minecraftforge.common.util.ForgeDirection;
 import programgames.multimodplus.proxy.CommonProxy;
 import programgames.multimodplus.tileentity.TileEntityDetector;
 
+import java.util.ArrayList;
 
 
-public class BlockDetector  extends BlockContainer {
+public class BlockDetector  extends BlockContainer implements IDismantleable {
 
   private IIcon top;
   private IIcon sides;
@@ -418,15 +421,43 @@ public boolean isOpaqueCube() {
   }
   public boolean rotateBlock(World world, int x, int y, int z, ForgeDirection axis)
   {
-    if((axis == ForgeDirection.UP || axis == ForgeDirection.DOWN) && !world.isRemote)
+//    System.out.println(axis.toString());
+//    ((TileEntityDetector)world.getTileEntity(x,y,z)).setFacing((short)2);
+//    if((axis == ForgeDirection.UP || axis == ForgeDirection.DOWN) && !world.isRemote)
+//    {
+//      int direction = world.getBlockMetadata(x, y, z) + 1;
+//      if(direction > 3)
+//      {
+//        direction = 0;
+//      }
+//      world.setBlockMetadataWithNotify(x, y, z, direction, 3);
+//      return true;
+//    }
+//    return false;
+    short facing = 1;
+    TileEntity tile = world.getTileEntity(x,y,z);
+    if(tile instanceof TileEntityDetector)
     {
-      int direction = world.getBlockMetadata(x, y, z) + 1;
-      if(direction > 3)
+      facing = ((TileEntityDetector)world.getTileEntity(x,y,z)).getFacing();
+      switch (facing)
       {
-        direction = 0;
+        case 2:
+          ((TileEntityDetector)tile).setFacing((short)4);
+          break;
+        case 3:
+          ((TileEntityDetector)tile).setFacing((short)5);
+          break;
+        case 4:
+          ((TileEntityDetector)tile).setFacing((short)3);
+          break;
+        case 5:
+          ((TileEntityDetector)tile).setFacing((short)2);
+          break;
       }
-      world.setBlockMetadataWithNotify(x, y, z, direction, 3);
-      return true;
+    }
+    else
+    {
+      return false;
     }
     return false;
   }
@@ -434,5 +465,20 @@ public boolean isOpaqueCube() {
   public ForgeDirection[] getValidRotations(World world, int x, int y, int z)
   {
     return new ForgeDirection[] {ForgeDirection.UP, ForgeDirection.DOWN};
+  }
+
+  @Override
+  public ArrayList<ItemStack> dismantleBlock(EntityPlayer player, World world, int x, int y, int z, boolean returnDrops) {
+    if (world.isRemote) {
+      return null;
+    }
+    System.out.println("wtf");
+      return Lists.newArrayList(new ItemStack(BlockMaker.detector,1));
+
+  }
+
+  @Override
+  public boolean canDismantle(EntityPlayer player, World world, int x, int y, int z) {
+    return false;
   }
 }
