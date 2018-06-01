@@ -1,10 +1,7 @@
 package programgames.multimodplus.tileentity;
 
-import cofh.api.block.IDismantleable;
 import ic2.api.tile.IWrenchable;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockAir;
-import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -12,11 +9,7 @@ import net.minecraft.network.NetworkManager;
 import net.minecraft.network.Packet;
 import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraftforge.common.util.ForgeDirection;
-import org.lwjgl.Sys;
-import programgames.multimodplus.block.BlockDetector;
-import programgames.multimodplus.block.BlockMaker;
-import buildcraft.api.tools.IToolWrench;
+
 public class TileEntityDetector extends TileEntity implements IWrenchable {
 
   private short facing = 2;

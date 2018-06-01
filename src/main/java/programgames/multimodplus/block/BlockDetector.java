@@ -472,7 +472,6 @@ public boolean isOpaqueCube() {
     if (world.isRemote) {
       return null;
     }
-    System.out.println("wtf");
       return Lists.newArrayList(new ItemStack(BlockMaker.detector,1));
 
   }

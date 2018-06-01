@@ -14,7 +14,7 @@ import programgames.multimodplus.proxy.CommonProxy;
  * <b>Main est la classe principale du mod.</b>
 
  * @author programgames
- * @version 2.0
+ * @version 1.0
  */
 
 @Mod(modid = Main.MODID, name = Main.MODNAME, version = Main.VERSION,useMetadata = true)
@@ -32,7 +32,7 @@ public class Main {
   /**
    * Version du mod.
    */
-  public static final String VERSION = "2.0.0";
+  public static final String VERSION = "1.0.0";
 
 
   /**
