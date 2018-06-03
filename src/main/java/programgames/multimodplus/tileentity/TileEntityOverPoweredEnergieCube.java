@@ -41,32 +41,7 @@ public class TileEntityOverPoweredEnergieCube extends TileEntity
   }
 
 
-  /**
-   * Read in save.
-   * @param nbt the nbt.
-   */
-  public void readFromNBT(NBTTagCompound nbt) {
 
-    this.energy = nbt.getInteger("Energy");
-
-    if (energy > capacity) {
-      energy = capacity;
-    }
-    
-  }
-
-  /**
-   * Write to save.
-   * @param nbt the nbt.
-   */
-  public void writeToNBT(NBTTagCompound nbt) {
-
-    if (energy < 0) {
-      energy = 0;
-    }
-    nbt.setInteger("Energy", energy);
-    
-  }
 
   /**
    * Set the capacity.

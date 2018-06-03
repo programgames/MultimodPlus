@@ -8,8 +8,8 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraftforge.common.MinecraftForge;
 import programgames.multimodplus.block.BlockMaker;
 import programgames.multimodplus.block.TileEntityBindingMaker;
-import programgames.multimodplus.client.RenderInventoryMaker;
 import programgames.multimodplus.client.RenderDetector;
+import programgames.multimodplus.client.RenderInventoryMaker;
 import programgames.multimodplus.common.EventHandler;
 import programgames.multimodplus.crafting.CraftingMaker;
 import programgames.multimodplus.gui.GuiMaker;
@@ -19,8 +19,9 @@ import programgames.multimodplus.world.Worldgen;
 
 /**
  * Client proxy.
- * @version 2.0
+ *
  * @author programgames
+ * @version 2.0
  */
 public class CommonProxy {
 
@@ -55,6 +56,7 @@ public class CommonProxy {
 
   /**
    * Init proxy.
+   *
    * @param e init event.
    */
   public void init(FMLInitializationEvent e) {
@@ -62,8 +64,10 @@ public class CommonProxy {
     CraftingMaker.make();
 
   }
+
   /**
    * post init proxy.
+   *
    * @param e de post initialisation de forge
    */
 

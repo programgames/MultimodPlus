@@ -32,8 +32,8 @@ public class BlockMaker {
             multitexture = new ChestBlock("multitexture", Material.cloth),
             "multitexture");
 
-    GameRegistry.registerBlock(firstore = new FirstOre("firstOre", Material.rock,
-                    ItemMaker.chocolate, 2, 0, 1),
+    GameRegistry.registerBlock(firstore = new MultiOre("firstOre", Material.rock,
+                    BlockMaker.firstore, 2, 1, 1),
             "firstOre");
 
     GameRegistry.registerBlock(

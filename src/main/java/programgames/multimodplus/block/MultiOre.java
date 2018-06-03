@@ -16,18 +16,15 @@ import programgames.multimodplus.Main;
  *
  */
 
-public class FirstOre extends Block {
+public class MultiOre extends Block {
 
-
-  private Item drop;
   private int meta;
   private int leastQuantity;
   private int mostQuantity;
 
-  protected FirstOre(String unlocalizedName, Material mat, Item drop, int meta, int leastQuantity, 
-      int mostQuantity) {
+  protected MultiOre(String unlocalizedName, Material mat, Block drop, int meta, int leastQuantity,
+                     int mostQuantity) {
     super(mat);
-    this.drop = drop;
     this.meta = meta;
     this.leastQuantity = leastQuantity;
     this.mostQuantity = mostQuantity;
@@ -39,14 +36,14 @@ public class FirstOre extends Block {
     this.setHardness(10.0f);
     this.setResistance(20.0f);
     this.setHarvestLevel("pickaxe", 2);
-    //this.setTickRandomly(true);
   }
-  
+
   @Override
   public Item getItemDropped(int meta, Random random, int fortune) {
-    return this.drop;
+    return Item.getItemFromBlock(this);
   }
   //multiple drops needed ? https://web.archive.org/web/20161126050512/http://bedrockminer.jimdo.com:80/modding-tutorials/basic-modding-1-7/blocks-dropping-special-items/
+
 
   @Override
   public int damageDropped(int metadata) {
@@ -66,7 +63,7 @@ public class FirstOre extends Block {
    * Define what is happening when the entity collide with the block.
    */
   public void onEntityCollidedWithBlock(World world, int i, int j, int k, Entity entity) {
-    entity.setFire(10);
+
   }
   
   /**

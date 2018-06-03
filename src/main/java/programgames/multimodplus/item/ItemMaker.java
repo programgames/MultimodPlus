@@ -55,6 +55,8 @@ public class ItemMaker {
   
   /** The key. */
   public static Item key;
+
+  public static Item blackIngot;
   
   /**
    * Inits the itemMaker.
@@ -88,13 +90,20 @@ public class ItemMaker {
         "StrongArmor", 3), "StrongBoots"); // 3 for boots
 
 
-    GameRegistry.registerItem(chocolate = new FirstFood("chocolate", 2, 0.2f, false,
+    GameRegistry.registerItem(chocolate = new FirstFood(
+            "chocolate",
+            2,
+            0.2f,
+            false,
         new PotionEffect(Potion.moveSpeed.id, 1200, 1),
         new PotionEffect(Potion.jump.id, 600, 0),
         new PotionEffect(Potion.regeneration.id, 200, 1))
         .setAlwaysEdible(), "chocolate");
 
     GameRegistry.registerItem(key = new Key("key").setTextureName(Main.MODID + ":key"),"key");
+    GameRegistry.registerItem(
+            blackIngot = new BlackIngot(
+                    "blackIngot").setTextureName(Main.MODID + ":blackIngot"),"black Ingot");
 
   }
 }

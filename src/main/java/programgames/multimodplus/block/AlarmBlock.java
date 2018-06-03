@@ -21,7 +21,7 @@ class AlarmBlock extends Block {
    * @param material        the material
    */
   protected  AlarmBlock(final String unlocalizedName, final Material material) {
-        super(material);
+    super(material);
 
     this.setBlockName(unlocalizedName);
     this.setBlockTextureName(Main.MODID + ":" + unlocalizedName);

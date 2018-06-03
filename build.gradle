@@ -44,6 +44,7 @@ minecraft {
 checkstyle {
     configFile = file("${project.rootDir}/config/checkstyle.xml")
     toolVersion = '8.8'
+	ignoreFailures = false
 }
 
 

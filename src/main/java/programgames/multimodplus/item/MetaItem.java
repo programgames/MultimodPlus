@@ -14,8 +14,12 @@ import net.minecraftforge.common.util.ForgeDirection;
 import programgames.multimodplus.Main;
 
 
+
 public class MetaItem extends Item {
 
+  /**
+   * The Icons.
+   */
   public IIcon[] icons = new IIcon[6];
 
   /**
@@ -30,13 +34,24 @@ public class MetaItem extends Item {
     this.setCreativeTab(CreativeTabs.tabMaterials);
   }
 
+  /**
+   * Method the registerIcons ...
+   *
+   * @param reg of type IIconRegister
+   */
   @Override
   public void registerIcons(IIconRegister reg) {
     for (int i = 0; i < 6; i++) {
       this.icons[i] = reg.registerIcon(Main.MODID + ":multitexture" + i);
     }
   }
-  
+
+  /**
+   * Method the getIconFromDamage ...
+   *
+   * @param meta of type int
+   * @return IIcon
+   */
   @Override
   public IIcon getIconFromDamage(int meta) {
     if (meta > 5) {
@@ -45,7 +60,14 @@ public class MetaItem extends Item {
     return this.icons[meta];
   }
 
-  
+
+  /**
+   * Method the getSubItems ...
+   *
+   * @param item of type Item
+   * @param tab of type CreativeTabs
+   * @param list of type List
+   */
   @SuppressWarnings("unchecked")
   @Override
   public void getSubItems(Item item, CreativeTabs tab, @SuppressWarnings("rawtypes") List list) {
@@ -54,20 +76,40 @@ public class MetaItem extends Item {
     }
   }
 
-  public boolean onItemUse(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int side, float hitX, float hitY, float hitZ)
-  {
-    if(!world.isRemote)
-    {
+
+  /**
+   * Method the onItemUse ...
+   *
+   * @param stack of type ItemStack
+   * @param player of type EntityPlayer
+   * @param world of type World
+   * @param x of type int
+   * @param y of type int
+   * @param z of type int
+   * @param side of type int
+   * @param hitX of type float
+   * @param hitY of type float
+   * @param hitZ of type float
+   * @return boolean
+   */
+  public boolean onItemUse(ItemStack stack, EntityPlayer player, World world, int x, int y, int z,
+                           int side, float hitX, float hitY, float hitZ) {
+    if (!world.isRemote) {
       player.addChatMessage(new ChatComponentText("serveur : side " + side));
       player.addChatMessage(new ChatComponentText("serveur : metadata " + world.getBlockMetadata(x, y, z)));
     }
-    if(world.getBlock(x, y, z).rotateBlock(world, x, y, z, ForgeDirection.getOrientation(side)))
-    {
+    if (world.getBlock(x, y, z).rotateBlock(world, x, y, z, ForgeDirection.getOrientation(side))) {
       return true;
     }
     return false;
   }
 
+  /**
+   * Method the getUnlocalizedName ...
+   *
+   * @param stack of type ItemStack
+   * @return String
+   */
   @Override
   public String getUnlocalizedName(ItemStack stack) {
     return this.getUnlocalizedName() + stack.getItemDamage();
